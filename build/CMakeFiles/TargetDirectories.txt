@@ -1,0 +1,5 @@
+/home/panai/protei-homeworks/build/CMakeFiles/edit_cache.dir
+/home/panai/protei-homeworks/build/CMakeFiles/rebuild_cache.dir
+/home/panai/protei-homeworks/build/task1/CMakeFiles/MyApp.dir
+/home/panai/protei-homeworks/build/task1/CMakeFiles/edit_cache.dir
+/home/panai/protei-homeworks/build/task1/CMakeFiles/rebuild_cache.dir
