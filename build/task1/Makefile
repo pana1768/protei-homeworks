@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles /home/panai/protei-homeworks/build/task1//CMakeFiles/progress.marks
@@ -115,6 +160,20 @@ preinstall/fast:
 depend:
 	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+task1/CMakeFiles/app_core.dir/rule:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/app_core.dir/rule
+.PHONY : task1/CMakeFiles/app_core.dir/rule
+
+# Convenience name for target.
+app_core: task1/CMakeFiles/app_core.dir/rule
+.PHONY : app_core
+
+# fast build rule for target.
+app_core/fast:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/build
+.PHONY : app_core/fast
 
 # Convenience name for target.
 task1/CMakeFiles/MyApp.dir/rule:
@@ -159,7 +218,7 @@ src/utils.o: src/utils.cpp.o
 
 # target to build an object file
 src/utils.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/utils.cpp.o
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.o
 .PHONY : src/utils.cpp.o
 
 src/utils.i: src/utils.cpp.i
@@ -167,7 +226,7 @@ src/utils.i: src/utils.cpp.i
 
 # target to preprocess a source file
 src/utils.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/utils.cpp.i
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.i
 .PHONY : src/utils.cpp.i
 
 src/utils.s: src/utils.cpp.s
@@ -175,7 +234,7 @@ src/utils.s: src/utils.cpp.s
 
 # target to generate assembly for a file
 src/utils.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/utils.cpp.s
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
 # Help Target
@@ -185,8 +244,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
+	@echo "... app_core"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

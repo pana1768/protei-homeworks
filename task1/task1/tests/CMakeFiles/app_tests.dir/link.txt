@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/app_tests.dir/utils_tests.cpp.o -o app_tests  -lapp_core ../../lib/libgtest_main.a ../../lib/libgtest.a 

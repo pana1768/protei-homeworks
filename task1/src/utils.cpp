@@ -1,5 +1,48 @@
 #include "../include/utils.hpp"
+#include <stdexcept>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
+#include <thread>
 
+
+static const char* levelToString(LogLevel level) {
+    switch (level) {
+        case LogLevel::Info: return "INFO";
+        case LogLevel::Warning: return "WARNING";
+        case LogLevel::Error: return "ERROR";
+        default: return "INFO";
+    }
+}
+
+static void getLocalTime(std::time_t tt, std::tm& outTm) {
+    localtime_r(&tt, &outTm);
+}
+
+
+void logMessage(LogLevel level, const char* message, const char* file, int line) {
+    using namespace std::chrono;
+
+    const auto now = system_clock::now();
+    const auto ms = (long long)(duration_cast<milliseconds>(now.time_since_epoch()).count() % 1000);
+    const std::time_t tt = system_clock::to_time_t(now);
+
+    std::tm tm{};
+    getLocalTime(tt, tm);
+
+    std::ostringstream tid;
+    tid << std::this_thread::get_id();
+
+    std::cerr
+        << std::put_time(&tm, "%Y-%m-%d %H:%M:%S")
+        << "." << std::setw(3) << std::setfill('0') << ms
+        << " [" << levelToString(level) << "]"
+        << " [tid=" << tid.str() << "] "
+        << (message ? message : "<null>")
+        << " (" << (file ? file : "<unknown>") << ":" << line << ")"
+        << "\n";
+}
 
 bool cstrEq(const char* a, const char* b) {
     if (!a || !b) return false;
@@ -36,13 +79,12 @@ void toLower(char* s) {
 
 bool parseInt(const char* s, int& value) {
     if (!s || s[0] == '\0') return false;
+    
 
     int sign = 1;
     unsigned int i = 0;
     if (s[0] == '-') {
-        sign = -1;
-        i = 1;
-        if (s[1] == '\0') return false;
+        return false;
     }
 
     int result = 0;
@@ -68,13 +110,29 @@ unsigned long hashStr(const char* s) {
     return hash;
 }
 
-bool parseCommandLine(int argc, char* argv[], AppConfig& outConfig) {
+bool containsOnlyPrintable(const char* s) {
+    if (!s) return false;
+    unsigned int i = 0;
+    while (s[i] != '\0') {
+        unsigned char c = (unsigned char)s[i];
+        if (c < 32 || c > 126) {
+            return false;
+        }
+        ++i;
+    }
+    return true;
+}
+
+void parseCommandLine(int argc, char* argv[], AppConfig& outConfig) {
     copyCstr(outConfig.address, "127.0.0.1", (unsigned int)sizeof(outConfig.address));
     copyCstr(outConfig.role, "Client", (unsigned int)sizeof(outConfig.role));
     outConfig.port = 0;
     outConfig.id = 0;
     outConfig.library[0] = '\0';
-
+    if (argc <= 1) {
+        LOG_WARNING("no command line arguments provided; using defaults");
+        return;
+    }
     for (int i = 1; i < argc; ++i) {
         const char* arg = argv[i];
         if (!arg) continue;
@@ -84,8 +142,8 @@ bool parseCommandLine(int argc, char* argv[], AppConfig& outConfig) {
         } else if (cstrEq(arg, "-p") && i + 1 < argc) {
             int port = 0;
             if (!parseInt(argv[++i], port)) {
-                std::cerr << "Invalid value for -p (port)\n";
-                return false;
+                LOG_ERROR("invalid value for -p (port)");
+                throw std::runtime_error("invalid value for -p (port)");
             }
             outConfig.port = port;
         } else if (cstrEq(arg, "-r") && i + 1 < argc) {
@@ -93,19 +151,17 @@ bool parseCommandLine(int argc, char* argv[], AppConfig& outConfig) {
         } else if (cstrEq(arg, "-i") && i + 1 < argc) {
             int id = 0;
             if (!parseInt(argv[++i], id)) {
-                std::cerr << "Invalid value for -i (id)\n";
-                return false;
+                LOG_ERROR("invalid value for -i (id)");
+                throw std::runtime_error("invalid value for -i (id)");
             }
             outConfig.id = id;
         } else if (cstrEq(arg, "-L") && i + 1 < argc) {
             copyCstr(outConfig.library, argv[++i], (unsigned int)sizeof(outConfig.library));
         } else {
-            std::cerr << "Unknown or incomplete argument: " << arg << "\n";
-            return false;
+            LOG_ERROR("unknown or incomplete command line argument");
+            throw std::runtime_error("unknown or incomplete argument");
         }
     }
-
-    return true;
 }
 
 void printConfig(const AppConfig& config) {
@@ -173,14 +229,13 @@ Types inputType(Types currentType, void*& vectorPtr) {
         vectorPtr = static_cast<void*>(new Vector<float>());
         return Types::FLOAT;
     }
-
-    std::cout << "type undefiend\n";
+    LOG_WARNING("unsupported type requested");
     return Types::None;
 }
 
 void printVectorCmd(const Types type, void*& vectorPtr) {
     if (type == Types::None || !vectorPtr) {
-        std::cout << "first enter the vector type\n";
+        LOG_WARNING("Vector type undefind");
         return;
     }
     dispatch(type, vectorPtr, [](auto* v) {
@@ -190,22 +245,29 @@ void printVectorCmd(const Types type, void*& vectorPtr) {
 
 void inputVectorCmd(const Types type, void*& vectorPtr) {
     if (type == Types::None || !vectorPtr) {
-        std::cout << "first enter the vector type\n";
+        LOG_WARNING("Vector type undefind");
         return;
     }
 
-    dispatch(type, vectorPtr, [](auto* v) {
-        input_vector(*v);
-    });
+    try {
+        dispatch(type, vectorPtr, [](auto* v) {
+            input_vector(*v);
+        });
+    } catch (const std::exception& ex) {
+        LOG_ERROR(ex.what());
+    }
 }
 
 static void handleAlias(char* alias, unsigned int aliasSize) {
     inputAlias(alias, aliasSize);
     std::cout << "Alias set to: " << alias << "\n";
+    LOG_INFO("Alias succsess changed");
+    
 }
 
 static void handleType(Types& type, void*& vectorPtr) {
     type = inputType(type, vectorPtr);
+    
     if (type != Types::None) {
         const char* name = "none";
         switch (type) {
@@ -215,6 +277,7 @@ static void handleType(Types& type, void*& vectorPtr) {
             case Types::None:
             default: name = "none"; break;
         }
+        LOG_INFO("Vector type succsess changed");
         std::cout << "Vector type set to: " << name << "\n";
     }
 }
@@ -249,6 +312,11 @@ void mainLoop() {
             break;
         }
 
+        if (!containsOnlyPrintable(command)) {
+            LOG_WARNING("command contains non-printable characters");
+            continue;
+        }
+
         toLower(command);
         const unsigned long cmdHash = hashStr(command);
 
@@ -266,7 +334,7 @@ void mainLoop() {
         } else if (cmdHash == hashStr("print")) {
             handlePrint(type, vectorPtr);
         } else {
-            std::cout << "Unknow command\n";
+            LOG_WARNING("unknown command entered");
         }
     }
 
