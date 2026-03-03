@@ -2,6 +2,7 @@
 #define INCLUDE_VECTOR_HPP_
 
 #include <iostream>
+#include <stdexcept>
 
 enum class Types {
     INT,
@@ -60,13 +61,18 @@ void input_vector(Vector<T>& vector) {
             for (size_t m = 0; m < vector.w; ++m) {
                 for (size_t n = 0; n < vector.z; ++n) {
                     if (!(std::cin >> vector.arr[i][j][m][n])) {
-                        std::cout << "Ошибка ввода.\n";
                         std::cin.clear();
                         std::cin.ignore(10000, '\n');
-                        return;
+                        throw std::runtime_error("non-numeric value in numeric vector");
                     }
                 }
             }
+        }
+    }
+
+    if (vector.x > 0 && vector.y > 0 && vector.w > 0 && vector.z > 0) {
+        if (vector.arr[0][0][0][vector.z - 1] == static_cast<T>(0)) {
+            throw std::runtime_error("w component of vector must be non-zero");
         }
     }
 }

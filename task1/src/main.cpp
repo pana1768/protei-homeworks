@@ -1,10 +1,15 @@
 #include <iostream>
+#include <exception>
+
 #include "../include/utils.hpp"
 
 int main(int argc, char* argv[]) {
     AppConfig config;
-    if (!parseCommandLine(argc, argv, config)) {
-        std::cerr << "Failed to parse command line arguments.\n";
+
+    try {
+        parseCommandLine(argc, argv, config);
+    } catch (const std::exception& ex) {
+        LOG_ERROR(ex.what());
         return 1;
     }
 

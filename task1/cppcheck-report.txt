@@ -1,0 +1,65 @@
+src/main.cpp:1:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+src/main.cpp:2:0: information: Include file: <exception> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <exception>
+^
+include/utils.hpp:10:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+include/vector.hpp:4:0: information: Include file: <iostream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iostream>
+^
+include/vector.hpp:5:0: information: Include file: <stdexcept> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdexcept>
+^
+include/vector.hpp:25:9: warning: Struct 'Vector' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor]
+        arr = new T***[x];
+        ^
+include/vector.hpp:25:9: warning: Struct 'Vector' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+        arr = new T***[x];
+        ^
+src/utils.cpp:2:0: information: Include file: <stdexcept> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdexcept>
+^
+src/utils.cpp:3:0: information: Include file: <chrono> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <chrono>
+^
+src/utils.cpp:4:0: information: Include file: <ctime> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <ctime>
+^
+src/utils.cpp:5:0: information: Include file: <iomanip> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <iomanip>
+^
+src/utils.cpp:6:0: information: Include file: <sstream> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sstream>
+^
+src/utils.cpp:7:0: information: Include file: <thread> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <thread>
+^
+src/utils.cpp:8:0: information: Include file: <string> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string>
+^
+include/vector.hpp:25:9: warning: Struct 'Vector < int >' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor]
+        arr = new T***[x];
+        ^
+include/vector.hpp:25:9: warning: Struct 'Vector < int >' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+        arr = new T***[x];
+        ^
+include/vector.hpp:25:9: warning: Struct 'Vector < double >' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor]
+        arr = new T***[x];
+        ^
+include/vector.hpp:25:9: warning: Struct 'Vector < double >' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+        arr = new T***[x];
+        ^
+include/vector.hpp:25:9: warning: Struct 'Vector < float >' does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s). [noCopyConstructor]
+        arr = new T***[x];
+        ^
+include/vector.hpp:25:9: warning: Struct 'Vector < float >' does not have a operator= which is recommended since it has dynamic memory/resource allocation(s). [noOperatorEq]
+        arr = new T***[x];
+        ^
+tests/utils_tests.cpp:1:0: information: Include file: <gtest/gtest.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <gtest/gtest.h>
+^
+nofile:0:0: information: Active checkers: 172/592 (use --checkers-report=<filename> to see details) [checkersReport]
+
