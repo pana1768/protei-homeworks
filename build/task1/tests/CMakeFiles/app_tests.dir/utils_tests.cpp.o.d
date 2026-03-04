@@ -279,5 +279,4 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
  /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
  /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
  /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
- /home/panai/protei-homeworks/task1/tests/../include/utils.hpp \
- /home/panai/protei-homeworks/task1/tests/../include/vector.hpp
+ /home/panai/protei-homeworks/task1/tests/../include/AppSettings.h

@@ -1,6 +1,7 @@
 #ifndef INCLUDE_VECTOR_HPP_
 #define INCLUDE_VECTOR_HPP_
 
+#include <cstddef>
 #include <iostream>
 #include <stdexcept>
 
@@ -18,6 +19,9 @@ struct Vector {
     size_t y;
     size_t w;
     size_t z;
+
+    Vector(const Vector&) = delete;
+    Vector& operator=(const Vector&) = delete;
 
     explicit Vector(const size_t x_ = 1, const size_t y_ = 1,
                     const size_t w_ = 1, const size_t z_ = 4)
@@ -38,9 +42,7 @@ struct Vector {
     }
 
     ~Vector() {
-        if (!arr) {
-            return;
-        }
+        if (!arr) return;
         for (size_t i = 0; i < x; ++i) {
             for (size_t j = 0; j < y; ++j) {
                 for (size_t m = 0; m < w; ++m) {
@@ -69,7 +71,6 @@ void input_vector(Vector<T>& vector) {
             }
         }
     }
-
     if (vector.x > 0 && vector.y > 0 && vector.w > 0 && vector.z > 0) {
         if (vector.arr[0][0][0][vector.z - 1] == static_cast<T>(0)) {
             throw std::runtime_error("w component of vector must be non-zero");
@@ -92,22 +93,4 @@ void print_vector(const Vector<T>& vector) {
     }
 }
 
-template <typename func_t>
-void dispatch(const Types type, void* vectorPtr, func_t func) {
-    switch (type) {
-        case Types::INT:
-            func(static_cast<Vector<int>*>(vectorPtr));
-            break;
-        case Types::DOUBLE:
-            func(static_cast<Vector<double>*>(vectorPtr));
-            break;
-        case Types::FLOAT:
-            func(static_cast<Vector<float>*>(vectorPtr));
-            break;
-        case Types::None:
-        default:
-            break;
-    }
-}
-
-#endif  
+#endif 

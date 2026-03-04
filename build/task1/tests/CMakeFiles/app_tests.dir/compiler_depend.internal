@@ -25,7 +25,6 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o
  /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h
  /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h
  /home/panai/protei-homeworks/task1/include/utils.hpp
- /home/panai/protei-homeworks/task1/include/vector.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h

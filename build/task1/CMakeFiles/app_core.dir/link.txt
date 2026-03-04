@@ -1,2 +1,2 @@
-/usr/bin/ar qc libapp_core.a CMakeFiles/app_core.dir/src/utils.cpp.o
+/usr/bin/ar qc libapp_core.a CMakeFiles/app_core.dir/src/utils.cpp.o CMakeFiles/app_core.dir/src/AppSettings.cpp.o CMakeFiles/app_core.dir/src/AppContext.cpp.o CMakeFiles/app_core.dir/src/DataPool.cpp.o CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o CMakeFiles/app_core.dir/src/ResourceTest.cpp.o
 /usr/bin/ranlib libapp_core.a

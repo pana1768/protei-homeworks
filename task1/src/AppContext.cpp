@@ -1,0 +1,231 @@
+#include "../include/AppContext.h"
+#include "../include/ConnectionTest.h"
+#include "../include/ResourceTest.h"
+#include "../include/Menu.h"
+#include "../include/utils.hpp"
+
+#include <cctype>
+#include <functional>
+#include <iostream>
+#include <sstream>
+#include <unordered_map>
+
+class AliasMenuItem : public MenuItem {
+public:
+    AliasMenuItem() : MenuItem("alias") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class TypeMenuItem : public MenuItem {
+public:
+    TypeMenuItem() : MenuItem("type") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class VectorMenuItem : public MenuItem {
+public:
+    VectorMenuItem() : MenuItem("vector") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class PrintMenuItem : public MenuItem {
+public:
+    PrintMenuItem() : MenuItem("print") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class ExitMenuItem : public MenuItem {
+public:
+    ExitMenuItem() : MenuItem("exit") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class HelpMenuItem : public MenuItem {
+public:
+    HelpMenuItem() : MenuItem("help") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class PushPoolMenuItem : public MenuItem {
+public:
+    PushPoolMenuItem() : MenuItem("push") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+namespace {
+
+std::string toLower(const std::string& s) {
+    std::string r = s;
+    for (char& c : r) {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+    }
+    return r;
+}
+
+std::vector<std::string> split(const std::string& line) {
+    std::vector<std::string> result;
+    std::istringstream iss(line);
+    std::string token;
+    while (iss >> token) result.push_back(token);
+    return result;
+}
+
+} 
+
+namespace {
+
+using VectorFactory = std::function<std::unique_ptr<IVectorWrapper>()>;
+
+std::unordered_map<std::string, VectorFactory>& getVectorRegistry() {
+    static std::unordered_map<std::string, VectorFactory> reg;
+    if (reg.empty()) {
+        reg["int"]    = [] { return std::make_unique<TypedVectorWrapper<int>>(); };
+        reg["double"] = [] { return std::make_unique<TypedVectorWrapper<double>>(); };
+        reg["float"]  = [] { return std::make_unique<TypedVectorWrapper<float>>(); };
+    }
+    return reg;
+}
+
+} 
+
+AppContext::AppContext(AppSettings s)
+    : settings(std::move(s)),
+      currentVector(nullptr),
+      dataPool(),
+      tests(),
+      shouldExit(false) {
+    tests.push_back(std::make_unique<ConnectionTest>(
+        std::vector<std::string>{settings.address()}));
+    tests.push_back(std::make_unique<ResourceTest>(
+        std::vector<std::string>{"config.txt"}));
+}
+
+std::unique_ptr<IVectorWrapper> AppContext::createVectorByType(
+    const std::string& typeName) const {
+    auto& reg = getVectorRegistry();
+    auto it = reg.find(toLower(typeName));
+    return (it != reg.end()) ? it->second() : nullptr;
+}
+
+void AliasMenuItem::execute(AppContext& ctx,
+                            const std::vector<std::string>& args) {
+    if (args.empty()) {
+        LOG_WARNING("alias: missing name");
+        return;
+    }
+    ctx.settings.setUserName(args[0]);
+    std::cout << "Alias set to: " << ctx.settings.userName() << "\n";
+}
+
+void TypeMenuItem::execute(AppContext& ctx,
+                           const std::vector<std::string>& args) {
+    if (args.empty()) {
+        LOG_WARNING("type: missing type name");
+        return;
+    }
+    auto vec = ctx.createVectorByType(args[0]);
+    if (!vec) {
+        LOG_WARNING("unsupported type requested");
+        return;
+    }
+    ctx.currentVector = std::move(vec);
+    std::cout << "Vector type set to: " << args[0] << "\n";
+}
+
+void VectorMenuItem::execute(AppContext& ctx,
+                             const std::vector<std::string>&) {
+    if (!ctx.currentVector) {
+        LOG_WARNING("vector: type not set");
+        return;
+    }
+    try {
+        ctx.currentVector->input(std::cin);
+    } catch (const std::exception& ex) {
+        LOG_ERROR(std::string(ex.what()));
+        std::cout << "vector input error: " << ex.what() << "\n";
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
+    }
+}
+
+void PrintMenuItem::execute(AppContext& ctx,
+                            const std::vector<std::string>&) {
+    if (!ctx.currentVector) {
+        LOG_WARNING("print: no vector");
+        return;
+    }
+    ctx.currentVector->print(std::cout);
+}
+
+void ExitMenuItem::execute(AppContext& ctx,
+                           const std::vector<std::string>&) {
+    ctx.shouldExit = true;
+    std::cout << "Exit\n";
+}
+
+void HelpMenuItem::execute(AppContext&,
+                           const std::vector<std::string>&) {
+    std::cout <<
+        "Commands:\n"
+        "  alias <name>        - set user alias\n"
+        "  type <int|double|float> - set vector type\n"
+        "  vector              - input 4D vector (reads from stdin)\n"
+        "  print               - print current vector\n"
+        "  push                - push current vector to DataPool (FIFO)\n"
+        "  exit                - exit\n";
+}
+
+void PushPoolMenuItem::execute(AppContext& ctx,
+                               const std::vector<std::string>&) {
+    if (!ctx.currentVector) {
+        LOG_WARNING("push: no vector");
+        return;
+    }
+    ctx.dataPool.push(ctx.currentVector->clone());
+    std::cout << "Vector pushed to DataPool\n";
+}
+
+void Menu::handleLine(const std::string& line) {
+    auto tokens = split(line);
+    if (tokens.empty()) return;
+
+    const std::string cmd = toLower(tokens[0]);
+    std::vector<std::string> args(tokens.begin() + 1, tokens.end());
+
+    auto it = items_.find(cmd);
+    if (it == items_.end()) {
+        LOG_WARNING("unknown command: " + cmd);
+        return;
+    }
+    it->second->execute(ctx_, args);
+}
+
+void Menu::registerItem(std::unique_ptr<MenuItem> item) {
+    const std::string key = toLower(item->name());
+    items_[key] = std::move(item);
+}
+
+Menu::Menu(AppContext& ctx) : ctx_(ctx) {
+    registerItem(std::make_unique<HelpMenuItem>());
+    registerItem(std::make_unique<AliasMenuItem>());
+    registerItem(std::make_unique<TypeMenuItem>());
+    registerItem(std::make_unique<VectorMenuItem>());
+    registerItem(std::make_unique<PrintMenuItem>());
+    registerItem(std::make_unique<PushPoolMenuItem>());
+    auto exitItem = std::make_unique<ExitMenuItem>();
+    registerItem(std::move(exitItem));
+    items_["quit"] = std::make_unique<ExitMenuItem>();
+}
+
+void mainLoop(AppContext& ctx) {
+    Menu menu(ctx);
+    std::cout << "Type 'help' for commands.\n";
+
+    std::string line;
+    while (!ctx.shouldExit) {
+        std::cout << "> ";
+        if (!std::getline(std::cin, line)) break;
+        if (line.empty()) continue;
+        menu.handleLine(line);
+    }
+}

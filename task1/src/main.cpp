@@ -1,23 +1,23 @@
-#include <iostream>
-#include <exception>
-
+#include "../include/AppSettings.h"
+#include "../include/AppContext.h"
 #include "../include/utils.hpp"
 
-int main(int argc, char* argv[]) {
-    AppConfig config;
+#include <iostream>
 
+int main(int argc, char* argv[]) {
     try {
-        parseCommandLine(argc, argv, config);
+        AppSettings settings(argc, argv);
+
+        std::cout << "Application started.\n";
+        settings.print(std::cout);
+        std::cout << "\n";
+
+        AppContext ctx(std::move(settings));
+        mainLoop(ctx);
     } catch (const std::exception& ex) {
-        LOG_ERROR(ex.what());
+        LOG_ERROR(std::string(ex.what()));
+        std::cerr << "Failed: " << ex.what() << "\n";
         return 1;
     }
-
-    std::cout << "Application started.\n";
-    printConfig(config);
-    std::cout << "\n";
-
-    mainLoop();
-
     return 0;
 }
