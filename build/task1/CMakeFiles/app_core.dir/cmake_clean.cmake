@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o.d"
   "CMakeFiles/app_core.dir/src/DataPool.cpp.o"
   "CMakeFiles/app_core.dir/src/DataPool.cpp.o.d"
+  "CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o"
+  "CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o.d"
   "CMakeFiles/app_core.dir/src/ResourceTest.cpp.o"
   "CMakeFiles/app_core.dir/src/ResourceTest.cpp.o.d"
   "CMakeFiles/app_core.dir/src/utils.cpp.o"

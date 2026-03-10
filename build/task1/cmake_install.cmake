@@ -1,4 +1,4 @@
-# Install script for directory: /home/panai/protei-homeworks/task1
+# Install script for directory: /home/vboxuser/protei-homeworks/task1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,6 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/panai/protei-homeworks/build/task1/tests/cmake_install.cmake")
+  include("/home/vboxuser/protei-homeworks/build/task1/tests/cmake_install.cmake")
 endif()
 

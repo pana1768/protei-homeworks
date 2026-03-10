@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/panai/protei-homeworks/build/_deps/googletest-src/googlemock/include -I/home/panai/protei-homeworks/build/_deps/googletest-src/googlemock -isystem /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include -isystem /home/panai/protei-homeworks/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/home/vboxuser/protei-homeworks/build/_deps/googletest-src/googlemock/include -I/home/vboxuser/protei-homeworks/build/_deps/googletest-src/googlemock -isystem /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include -isystem /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 

@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <iostream>
 #include <stdexcept>
+#include <vector>
 
 enum class Types {
     INT,
@@ -14,7 +15,7 @@ enum class Types {
 
 template <typename T>
 struct Vector {
-    T**** arr;
+    std::vector<T> data_;
     size_t x;
     size_t y;
     size_t w;
@@ -23,36 +24,21 @@ struct Vector {
     Vector(const Vector&) = delete;
     Vector& operator=(const Vector&) = delete;
 
-    explicit Vector(const size_t x_ = 1, const size_t y_ = 1,
-                    const size_t w_ = 1, const size_t z_ = 4)
-        : arr(0), x(x_), y(y_), w(w_), z(z_) {
-        arr = new T***[x];
-        for (size_t i = 0; i < x; ++i) {
-            arr[i] = new T**[y];
-            for (size_t j = 0; j < y; ++j) {
-                arr[i][j] = new T*[w];
-                for (size_t m = 0; m < w; ++m) {
-                    arr[i][j][m] = new T[z];
-                    for (size_t n = 0; n < z; ++n) {
-                        arr[i][j][m][n] = static_cast<T>(0);
-                    }
-                }
-            }
-        }
+    size_t index(size_t i, size_t j, size_t m, size_t n) const {
+        return i * (y * w * z) + j * (w * z) + m * z + n;
     }
 
-    ~Vector() {
-        if (!arr) return;
-        for (size_t i = 0; i < x; ++i) {
-            for (size_t j = 0; j < y; ++j) {
-                for (size_t m = 0; m < w; ++m) {
-                    delete[] arr[i][j][m];
-                }
-                delete[] arr[i][j];
-            }
-            delete[] arr[i];
-        }
-        delete[] arr;
+    T& at(size_t i, size_t j, size_t m, size_t n) {
+        return data_[index(i, j, m, n)];
+    }
+    const T& at(size_t i, size_t j, size_t m, size_t n) const {
+        return data_[index(i, j, m, n)];
+    }
+
+    explicit Vector(const size_t x_ = 1, const size_t y_ = 1,
+                    const size_t w_ = 1, const size_t z_ = 4)
+        : x(x_), y(y_), w(w_), z(z_) {
+        data_.resize(x * y * w * z, static_cast<T>(0));
     }
 };
 
@@ -62,7 +48,7 @@ void input_vector(Vector<T>& vector) {
         for (size_t j = 0; j < vector.y; ++j) {
             for (size_t m = 0; m < vector.w; ++m) {
                 for (size_t n = 0; n < vector.z; ++n) {
-                    if (!(std::cin >> vector.arr[i][j][m][n])) {
+                    if (!(std::cin >> vector.at(i, j, m, n))) {
                         std::cin.clear();
                         std::cin.ignore(10000, '\n');
                         throw std::runtime_error("non-numeric value in numeric vector");
@@ -72,7 +58,7 @@ void input_vector(Vector<T>& vector) {
         }
     }
     if (vector.x > 0 && vector.y > 0 && vector.w > 0 && vector.z > 0) {
-        if (vector.arr[0][0][0][vector.z - 1] == static_cast<T>(0)) {
+        if (vector.at(0, 0, 0, vector.z - 1) == static_cast<T>(0)) {
             throw std::runtime_error("w component of vector must be non-zero");
         }
     }
@@ -84,7 +70,7 @@ void print_vector(const Vector<T>& vector) {
         for (size_t j = 0; j < vector.y; ++j) {
             for (size_t m = 0; m < vector.w; ++m) {
                 for (size_t n = 0; n < vector.z; ++n) {
-                    std::cout << vector.arr[i][j][m][n] << " ";
+                    std::cout << vector.at(i, j, m, n) << " ";
                 }
                 std::cout << std::endl;
             }

@@ -24,4 +24,4 @@ struct AppContext {
 
 void mainLoop(AppContext& ctx);
 
-#endif  // APP_CONTEXT_H
+#endif 

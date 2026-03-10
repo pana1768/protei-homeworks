@@ -1,7 +1,7 @@
 task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
- /home/panai/protei-homeworks/task1/tests/utils_tests.cpp \
+ /home/vboxuser/protei-homeworks/task1/tests/utils_tests.cpp \
  /usr/include/stdc-predef.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
  /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -187,9 +187,9 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
  /usr/include/c++/13/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/13/iostream \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
@@ -207,8 +207,8 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -223,9 +223,9 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
  /usr/include/c++/13/any /usr/include/c++/13/optional \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/variant \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
  /usr/include/c++/13/atomic /usr/include/c++/13/functional \
  /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
@@ -236,9 +236,9 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
  /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
  /usr/include/x86_64-linux-gnu/sys/wait.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
@@ -265,18 +265,18 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h /usr/include/c++/13/map \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
  /usr/include/c++/13/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
  /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
  /usr/include/c++/13/cassert /usr/include/assert.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
- /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
- /home/panai/protei-homeworks/task1/tests/../include/AppSettings.h
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+ /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
+ /home/vboxuser/protei-homeworks/task1/tests/../include/AppSettings.h

@@ -1,7 +1,7 @@
 task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
- /home/panai/protei-homeworks/task1/src/main.cpp \
+ /home/vboxuser/protei-homeworks/task1/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/panai/protei-homeworks/task1/src/../include/AppSettings.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/AppSettings.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -151,13 +151,16 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/panai/protei-homeworks/task1/src/../include/AppContext.h \
- /home/panai/protei-homeworks/task1/src/../include/AppSettings.h \
- /home/panai/protei-homeworks/task1/src/../include/DataPool.h \
- /home/panai/protei-homeworks/task1/src/../include/VectorWrapper.h \
- /home/panai/protei-homeworks/task1/src/../include/vector.hpp \
- /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/bits/stl_uninitialized.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/AppContext.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/AppSettings.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/DataPool.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/VectorWrapper.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/vector.hpp \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -174,10 +177,8 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/deque \
+ /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
- /home/panai/protei-homeworks/task1/src/../include/interfaces.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc \
- /home/panai/protei-homeworks/task1/src/../include/utils.hpp
+ /home/vboxuser/protei-homeworks/task1/src/../include/interfaces.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/utils.hpp
