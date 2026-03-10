@@ -24,7 +24,6 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: /home/panai/protei-homew
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /home/panai/protei-homeworks/task1/include/utils.hpp \
-  /home/panai/protei-homeworks/task1/include/vector.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -465,10 +464,6 @@ task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: /home/panai/protei-homew
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
-/usr/include/x86_64-linux-gnu/bits/stat.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
-
 /usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
@@ -621,37 +616,11 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/c++/13/bits/charconv.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-/usr/include/c++/13/bits/hashtable_policy.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
-
-/usr/include/c++/13/bits/std_function.h:
-
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/c++/13/bits/exception.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:
-
-/home/panai/protei-homeworks/task1/tests/utils_tests.cpp:
-
-/usr/include/c++/13/bits/memory_resource.h:
-
-/usr/include/c++/13/streambuf:
-
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/13/typeinfo:
 
 _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
@@ -664,6 +633,16 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 /usr/include/c++/13/bits/stl_tree.h:
 
 /usr/include/c++/13/bits/codecvt.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+/home/panai/protei-homeworks/task1/tests/utils_tests.cpp:
+
+/usr/include/c++/13/bits/exception.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/c++/13/streambuf:
 
 /usr/include/c++/13/clocale:
 
@@ -699,9 +678,15 @@ _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
 
 /usr/include/c++/13/stdlib.h:
 
-/usr/include/c++/13/cstdio:
+/usr/include/asm-generic/posix_types.h:
 
-_deps/googletest-src/googletest/include/gtest/gtest-printers.h:
+/usr/include/stdc-predef.h:
+
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
+/usr/include/c++/13/bits/locale_classes.tcc:
+
+_deps/googletest-src/googletest/include/gtest/gtest-message.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -710,18 +695,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 _deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
-_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h:
-
-/usr/include/c++/13/bits/uniform_int_dist.h:
-
-_deps/googletest-src/googletest/include/gtest/gtest-message.h:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
-
-/home/panai/protei-homeworks/task1/include/vector.hpp:
 
 _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 
@@ -769,10 +742,6 @@ _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
 
 /usr/include/c++/13/set:
 
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/stdc-predef.h:
-
 /usr/include/c++/13/bits/concept_check.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
@@ -785,11 +754,25 @@ _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
+/usr/include/c++/13/bits/unique_lock.h:
+
+/usr/include/c++/13/mutex:
+
 /usr/include/c++/13/bits/allocated_ptr.h:
 
 /usr/include/c++/13/bit:
 
 /usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/c++/13/bits/charconv.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-printers.h:
+
+/usr/include/c++/13/cstdio:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
@@ -817,6 +800,16 @@ _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 
 /usr/include/libintl.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+
+/usr/include/c++/13/bits/std_function.h:
+
+/usr/include/c++/13/bits/char_traits.h:
+
+/usr/include/c++/13/bits/hashtable_policy.h:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/13/bits/chrono.h:
@@ -831,9 +824,9 @@ _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
-/usr/include/c++/13/bits/unique_lock.h:
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
 
-/usr/include/c++/13/mutex:
+/usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/optional:
 
@@ -856,10 +849,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-matchers.h:
 /usr/include/c++/13/cwchar:
 
 /usr/include/c++/13/debug/assertions.h:
-
-/usr/include/sched.h:
-
-/usr/include/wctype.h:
 
 /usr/include/c++/13/ext/aligned_buffer.h:
 
@@ -898,6 +887,10 @@ _deps/googletest-src/googletest/include/gtest/gtest-matchers.h:
 _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/c++/13/iostream:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 /usr/include/c++/13/istream:
 
@@ -966,6 +959,10 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 /usr/include/pthread.h:
 
 /usr/include/regex.h:
+
+/usr/include/wctype.h:
+
+/usr/include/sched.h:
 
 /usr/include/c++/13/iomanip:
 

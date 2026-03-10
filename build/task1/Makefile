@@ -189,6 +189,126 @@ MyApp/fast:
 	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
 
+src/AppContext.o: src/AppContext.cpp.o
+.PHONY : src/AppContext.o
+
+# target to build an object file
+src/AppContext.cpp.o:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o
+.PHONY : src/AppContext.cpp.o
+
+src/AppContext.i: src/AppContext.cpp.i
+.PHONY : src/AppContext.i
+
+# target to preprocess a source file
+src/AppContext.cpp.i:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.i
+.PHONY : src/AppContext.cpp.i
+
+src/AppContext.s: src/AppContext.cpp.s
+.PHONY : src/AppContext.s
+
+# target to generate assembly for a file
+src/AppContext.cpp.s:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.s
+.PHONY : src/AppContext.cpp.s
+
+src/AppSettings.o: src/AppSettings.cpp.o
+.PHONY : src/AppSettings.o
+
+# target to build an object file
+src/AppSettings.cpp.o:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o
+.PHONY : src/AppSettings.cpp.o
+
+src/AppSettings.i: src/AppSettings.cpp.i
+.PHONY : src/AppSettings.i
+
+# target to preprocess a source file
+src/AppSettings.cpp.i:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.i
+.PHONY : src/AppSettings.cpp.i
+
+src/AppSettings.s: src/AppSettings.cpp.s
+.PHONY : src/AppSettings.s
+
+# target to generate assembly for a file
+src/AppSettings.cpp.s:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.s
+.PHONY : src/AppSettings.cpp.s
+
+src/ConnectionTest.o: src/ConnectionTest.cpp.o
+.PHONY : src/ConnectionTest.o
+
+# target to build an object file
+src/ConnectionTest.cpp.o:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o
+.PHONY : src/ConnectionTest.cpp.o
+
+src/ConnectionTest.i: src/ConnectionTest.cpp.i
+.PHONY : src/ConnectionTest.i
+
+# target to preprocess a source file
+src/ConnectionTest.cpp.i:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i
+.PHONY : src/ConnectionTest.cpp.i
+
+src/ConnectionTest.s: src/ConnectionTest.cpp.s
+.PHONY : src/ConnectionTest.s
+
+# target to generate assembly for a file
+src/ConnectionTest.cpp.s:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s
+.PHONY : src/ConnectionTest.cpp.s
+
+src/DataPool.o: src/DataPool.cpp.o
+.PHONY : src/DataPool.o
+
+# target to build an object file
+src/DataPool.cpp.o:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o
+.PHONY : src/DataPool.cpp.o
+
+src/DataPool.i: src/DataPool.cpp.i
+.PHONY : src/DataPool.i
+
+# target to preprocess a source file
+src/DataPool.cpp.i:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.i
+.PHONY : src/DataPool.cpp.i
+
+src/DataPool.s: src/DataPool.cpp.s
+.PHONY : src/DataPool.s
+
+# target to generate assembly for a file
+src/DataPool.cpp.s:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.s
+.PHONY : src/DataPool.cpp.s
+
+src/ResourceTest.o: src/ResourceTest.cpp.o
+.PHONY : src/ResourceTest.o
+
+# target to build an object file
+src/ResourceTest.cpp.o:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o
+.PHONY : src/ResourceTest.cpp.o
+
+src/ResourceTest.i: src/ResourceTest.cpp.i
+.PHONY : src/ResourceTest.i
+
+# target to preprocess a source file
+src/ResourceTest.cpp.i:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.i
+.PHONY : src/ResourceTest.cpp.i
+
+src/ResourceTest.s: src/ResourceTest.cpp.s
+.PHONY : src/ResourceTest.s
+
+# target to generate assembly for a file
+src/ResourceTest.cpp.s:
+	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.s
+.PHONY : src/ResourceTest.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -251,6 +371,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
 	@echo "... app_core"
+	@echo "... src/AppContext.o"
+	@echo "... src/AppContext.i"
+	@echo "... src/AppContext.s"
+	@echo "... src/AppSettings.o"
+	@echo "... src/AppSettings.i"
+	@echo "... src/AppSettings.s"
+	@echo "... src/ConnectionTest.o"
+	@echo "... src/ConnectionTest.i"
+	@echo "... src/ConnectionTest.s"
+	@echo "... src/DataPool.o"
+	@echo "... src/DataPool.i"
+	@echo "... src/DataPool.s"
+	@echo "... src/ResourceTest.o"
+	@echo "... src/ResourceTest.i"
+	@echo "... src/ResourceTest.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

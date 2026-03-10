@@ -6,6 +6,11 @@ project(task1_app LANGUAGES CXX)
 
 add_library(app_core
     src/utils.cpp
+    src/AppSettings.cpp
+    src/AppContext.cpp
+    src/DataPool.cpp
+    src/ConnectionTest.cpp
+    src/ResourceTest.cpp
 )
 
 add_executable(MyApp

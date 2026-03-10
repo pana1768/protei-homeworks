@@ -1,6 +1,7 @@
-task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
- /home/panai/protei-homeworks/task1/src/main.cpp \
+task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: \
+ /home/panai/protei-homeworks/task1/src/AppContext.cpp \
  /usr/include/stdc-predef.h \
+ /home/panai/protei-homeworks/task1/src/../include/AppContext.h \
  /home/panai/protei-homeworks/task1/src/../include/AppSettings.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -151,8 +152,6 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/panai/protei-homeworks/task1/src/../include/AppContext.h \
- /home/panai/protei-homeworks/task1/src/../include/AppSettings.h \
  /home/panai/protei-homeworks/task1/src/../include/DataPool.h \
  /home/panai/protei-homeworks/task1/src/../include/VectorWrapper.h \
  /home/panai/protei-homeworks/task1/src/../include/vector.hpp \
@@ -180,4 +179,22 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/panai/protei-homeworks/task1/src/../include/utils.hpp
+ /home/panai/protei-homeworks/task1/src/../include/ConnectionTest.h \
+ /home/panai/protei-homeworks/task1/src/../include/../include/interfaces.h \
+ /home/panai/protei-homeworks/task1/src/../include/ResourceTest.h \
+ /home/panai/protei-homeworks/task1/src/../include/Menu.h \
+ /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h \
+ /home/panai/protei-homeworks/task1/src/../include/utils.hpp \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/array /usr/include/c++/13/compare \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc

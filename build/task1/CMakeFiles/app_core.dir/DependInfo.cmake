@@ -8,6 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/panai/protei-homeworks/task1/src/AppContext.cpp" "task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o" "gcc" "task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o.d"
+  "/home/panai/protei-homeworks/task1/src/AppSettings.cpp" "task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o" "gcc" "task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o.d"
+  "/home/panai/protei-homeworks/task1/src/ConnectionTest.cpp" "task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o" "gcc" "task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o.d"
+  "/home/panai/protei-homeworks/task1/src/DataPool.cpp" "task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o" "gcc" "task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o.d"
+  "/home/panai/protei-homeworks/task1/src/ResourceTest.cpp" "task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o" "gcc" "task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o.d"
   "/home/panai/protei-homeworks/task1/src/utils.cpp" "task1/CMakeFiles/app_core.dir/src/utils.cpp.o" "gcc" "task1/CMakeFiles/app_core.dir/src/utils.cpp.o.d"
   )
 

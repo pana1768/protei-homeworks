@@ -83,17 +83,97 @@ task1/CMakeFiles/app_core.dir/src/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/utils.cpp.s"
 	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/src/utils.cpp -o CMakeFiles/app_core.dir/src/utils.cpp.s
 
+task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
+task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: /home/panai/protei-homeworks/task1/src/AppSettings.cpp
+task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o -MF CMakeFiles/app_core.dir/src/AppSettings.cpp.o.d -o CMakeFiles/app_core.dir/src/AppSettings.cpp.o -c /home/panai/protei-homeworks/task1/src/AppSettings.cpp
+
+task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/AppSettings.cpp.i"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panai/protei-homeworks/task1/src/AppSettings.cpp > CMakeFiles/app_core.dir/src/AppSettings.cpp.i
+
+task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/AppSettings.cpp.s"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/src/AppSettings.cpp -o CMakeFiles/app_core.dir/src/AppSettings.cpp.s
+
+task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
+task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: /home/panai/protei-homeworks/task1/src/AppContext.cpp
+task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o -MF CMakeFiles/app_core.dir/src/AppContext.cpp.o.d -o CMakeFiles/app_core.dir/src/AppContext.cpp.o -c /home/panai/protei-homeworks/task1/src/AppContext.cpp
+
+task1/CMakeFiles/app_core.dir/src/AppContext.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/AppContext.cpp.i"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panai/protei-homeworks/task1/src/AppContext.cpp > CMakeFiles/app_core.dir/src/AppContext.cpp.i
+
+task1/CMakeFiles/app_core.dir/src/AppContext.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/AppContext.cpp.s"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/src/AppContext.cpp -o CMakeFiles/app_core.dir/src/AppContext.cpp.s
+
+task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
+task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: /home/panai/protei-homeworks/task1/src/DataPool.cpp
+task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o -MF CMakeFiles/app_core.dir/src/DataPool.cpp.o.d -o CMakeFiles/app_core.dir/src/DataPool.cpp.o -c /home/panai/protei-homeworks/task1/src/DataPool.cpp
+
+task1/CMakeFiles/app_core.dir/src/DataPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/DataPool.cpp.i"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panai/protei-homeworks/task1/src/DataPool.cpp > CMakeFiles/app_core.dir/src/DataPool.cpp.i
+
+task1/CMakeFiles/app_core.dir/src/DataPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/DataPool.cpp.s"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/src/DataPool.cpp -o CMakeFiles/app_core.dir/src/DataPool.cpp.s
+
+task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
+task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o: /home/panai/protei-homeworks/task1/src/ConnectionTest.cpp
+task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o -MF CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o.d -o CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o -c /home/panai/protei-homeworks/task1/src/ConnectionTest.cpp
+
+task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panai/protei-homeworks/task1/src/ConnectionTest.cpp > CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i
+
+task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/src/ConnectionTest.cpp -o CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s
+
+task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
+task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o: /home/panai/protei-homeworks/task1/src/ResourceTest.cpp
+task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o -MF CMakeFiles/app_core.dir/src/ResourceTest.cpp.o.d -o CMakeFiles/app_core.dir/src/ResourceTest.cpp.o -c /home/panai/protei-homeworks/task1/src/ResourceTest.cpp
+
+task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/ResourceTest.cpp.i"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panai/protei-homeworks/task1/src/ResourceTest.cpp > CMakeFiles/app_core.dir/src/ResourceTest.cpp.i
+
+task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/ResourceTest.cpp.s"
+	cd /home/panai/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/src/ResourceTest.cpp -o CMakeFiles/app_core.dir/src/ResourceTest.cpp.s
+
 # Object files for target app_core
 app_core_OBJECTS = \
-"CMakeFiles/app_core.dir/src/utils.cpp.o"
+"CMakeFiles/app_core.dir/src/utils.cpp.o" \
+"CMakeFiles/app_core.dir/src/AppSettings.cpp.o" \
+"CMakeFiles/app_core.dir/src/AppContext.cpp.o" \
+"CMakeFiles/app_core.dir/src/DataPool.cpp.o" \
+"CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o" \
+"CMakeFiles/app_core.dir/src/ResourceTest.cpp.o"
 
 # External object files for target app_core
 app_core_EXTERNAL_OBJECTS =
 
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/utils.cpp.o
+task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o
+task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o
+task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o
+task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o
+task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/build.make
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libapp_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libapp_core.a"
 	cd /home/panai/protei-homeworks/build/task1 && $(CMAKE_COMMAND) -P CMakeFiles/app_core.dir/cmake_clean_target.cmake
 	cd /home/panai/protei-homeworks/build/task1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app_core.dir/link.txt --verbose=$(VERBOSE)
 
