@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panai/protei-homeworks
+CMAKE_SOURCE_DIR = /home/vboxuser/protei-homeworks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panai/protei-homeworks/build
+CMAKE_BINARY_DIR = /home/vboxuser/protei-homeworks/build
 
 # Include any dependencies generated for this target.
 include task1/tests/CMakeFiles/app_tests.dir/depend.make
@@ -70,18 +70,18 @@ include task1/tests/CMakeFiles/app_tests.dir/progress.make
 include task1/tests/CMakeFiles/app_tests.dir/flags.make
 
 task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: task1/tests/CMakeFiles/app_tests.dir/flags.make
-task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: /home/panai/protei-homeworks/task1/tests/utils_tests.cpp
+task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: /home/vboxuser/protei-homeworks/task1/tests/utils_tests.cpp
 task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o: task1/tests/CMakeFiles/app_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o"
-	cd /home/panai/protei-homeworks/build/task1/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o -MF CMakeFiles/app_tests.dir/utils_tests.cpp.o.d -o CMakeFiles/app_tests.dir/utils_tests.cpp.o -c /home/panai/protei-homeworks/task1/tests/utils_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o"
+	cd /home/vboxuser/protei-homeworks/build/task1/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o -MF CMakeFiles/app_tests.dir/utils_tests.cpp.o.d -o CMakeFiles/app_tests.dir/utils_tests.cpp.o -c /home/vboxuser/protei-homeworks/task1/tests/utils_tests.cpp
 
 task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_tests.dir/utils_tests.cpp.i"
-	cd /home/panai/protei-homeworks/build/task1/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panai/protei-homeworks/task1/tests/utils_tests.cpp > CMakeFiles/app_tests.dir/utils_tests.cpp.i
+	cd /home/vboxuser/protei-homeworks/build/task1/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/protei-homeworks/task1/tests/utils_tests.cpp > CMakeFiles/app_tests.dir/utils_tests.cpp.i
 
 task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_tests.dir/utils_tests.cpp.s"
-	cd /home/panai/protei-homeworks/build/task1/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panai/protei-homeworks/task1/tests/utils_tests.cpp -o CMakeFiles/app_tests.dir/utils_tests.cpp.s
+	cd /home/vboxuser/protei-homeworks/build/task1/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/protei-homeworks/task1/tests/utils_tests.cpp -o CMakeFiles/app_tests.dir/utils_tests.cpp.s
 
 # Object files for target app_tests
 app_tests_OBJECTS = \
@@ -96,19 +96,19 @@ task1/tests/app_tests: task1/libapp_core.a
 task1/tests/app_tests: lib/libgtest_main.a
 task1/tests/app_tests: lib/libgtest.a
 task1/tests/app_tests: task1/tests/CMakeFiles/app_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/panai/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable app_tests"
-	cd /home/panai/protei-homeworks/build/task1/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app_tests.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/panai/protei-homeworks/build/task1/tests && /usr/bin/cmake -D TEST_TARGET=app_tests -D TEST_EXECUTABLE=/home/panai/protei-homeworks/build/task1/tests/app_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/panai/protei-homeworks/build/task1/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=app_tests_TESTS -D CTEST_FILE=/home/panai/protei-homeworks/build/task1/tests/app_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable app_tests"
+	cd /home/vboxuser/protei-homeworks/build/task1/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app_tests.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/vboxuser/protei-homeworks/build/task1/tests && /usr/bin/cmake -D TEST_TARGET=app_tests -D TEST_EXECUTABLE=/home/vboxuser/protei-homeworks/build/task1/tests/app_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/vboxuser/protei-homeworks/build/task1/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=app_tests_TESTS -D CTEST_FILE=/home/vboxuser/protei-homeworks/build/task1/tests/app_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
 
 # Rule to build all files generated by this target.
 task1/tests/CMakeFiles/app_tests.dir/build: task1/tests/app_tests
 .PHONY : task1/tests/CMakeFiles/app_tests.dir/build
 
 task1/tests/CMakeFiles/app_tests.dir/clean:
-	cd /home/panai/protei-homeworks/build/task1/tests && $(CMAKE_COMMAND) -P CMakeFiles/app_tests.dir/cmake_clean.cmake
+	cd /home/vboxuser/protei-homeworks/build/task1/tests && $(CMAKE_COMMAND) -P CMakeFiles/app_tests.dir/cmake_clean.cmake
 .PHONY : task1/tests/CMakeFiles/app_tests.dir/clean
 
 task1/tests/CMakeFiles/app_tests.dir/depend:
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panai/protei-homeworks /home/panai/protei-homeworks/task1/tests /home/panai/protei-homeworks/build /home/panai/protei-homeworks/build/task1/tests /home/panai/protei-homeworks/build/task1/tests/CMakeFiles/app_tests.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vboxuser/protei-homeworks /home/vboxuser/protei-homeworks/task1/tests /home/vboxuser/protei-homeworks/build /home/vboxuser/protei-homeworks/build/task1/tests /home/vboxuser/protei-homeworks/build/task1/tests/CMakeFiles/app_tests.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : task1/tests/CMakeFiles/app_tests.dir/depend
 

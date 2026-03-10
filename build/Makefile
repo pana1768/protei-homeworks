@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panai/protei-homeworks
+CMAKE_SOURCE_DIR = /home/vboxuser/protei-homeworks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panai/protei-homeworks/build
+CMAKE_BINARY_DIR = /home/vboxuser/protei-homeworks/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles /home/panai/protei-homeworks/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles /home/vboxuser/protei-homeworks/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

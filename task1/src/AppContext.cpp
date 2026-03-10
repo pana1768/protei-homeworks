@@ -3,6 +3,8 @@
 #include "../include/ResourceTest.h"
 #include "../include/Menu.h"
 #include "../include/utils.hpp"
+#include "../include/NetworkAddress.h"
+
 
 #include <cctype>
 #include <functional>
@@ -46,6 +48,12 @@ public:
     void execute(AppContext& ctx, const std::vector<std::string>& args) override;
 };
 
+class AddressMenuItem : public MenuItem {
+public:
+    AddressMenuItem() : MenuItem("address") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
 class PushPoolMenuItem : public MenuItem {
 public:
     PushPoolMenuItem() : MenuItem("push") {}
@@ -60,6 +68,24 @@ std::string toLower(const std::string& s) {
         c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
     }
     return r;
+}
+
+std::string stripNonPrintable(const std::string& s) {
+    std::string r;
+    r.reserve(s.size());
+    for (unsigned char c : s) {
+        if (std::isprint(c) || std::isspace(c)) {
+            r += static_cast<char>(c);
+        }
+    }
+    return r;
+}
+
+std::string trim(const std::string& s) {
+    auto start = s.find_first_not_of(" \t\r\n");
+    if (start == std::string::npos) return "";
+    auto end = s.find_last_not_of(" \t\r\n");
+    return s.substr(start, end - start + 1);
 }
 
 std::vector<std::string> split(const std::string& line) {
@@ -133,15 +159,27 @@ void TypeMenuItem::execute(AppContext& ctx,
 }
 
 void VectorMenuItem::execute(AppContext& ctx,
-                             const std::vector<std::string>&) {
+                             const std::vector<std::string>& args) {
     if (!ctx.currentVector) {
         LOG_WARNING("vector: type not set");
         return;
     }
     try {
-        ctx.currentVector->input(std::cin);
+        if (!args.empty()) {
+            std::string line;
+            for (size_t i = 0; i < args.size(); ++i) {
+                if (i > 0) line += " ";
+                line += args[i];
+            }
+            if (!ctx.currentVector->inputFromString(line)) {
+                LOG_WARNING("vector: failed to parse from string");
+                return;
+            }
+        } else {
+            ctx.currentVector->input(std::cin);
+        }
     } catch (const std::exception& ex) {
-        LOG_ERROR(std::string(ex.what()));
+        LOG_ERROR(ex.what());
         std::cout << "vector input error: " << ex.what() << "\n";
         std::cin.clear();
         std::cin.ignore(10000, '\n');
@@ -169,10 +207,21 @@ void HelpMenuItem::execute(AppContext&,
         "Commands:\n"
         "  alias <name>        - set user alias\n"
         "  type <int|double|float> - set vector type\n"
-        "  vector              - input 4D vector (reads from stdin)\n"
+        "  vector [n1 n2 ...]  - input 4D vector (stdin or from args)\n"
         "  print               - print current vector\n"
         "  push                - push current vector to DataPool (FIFO)\n"
-        "  exit                - exit\n";
+        "  address             - show network address and port\n"
+        "  exit, quit          - exit\n";
+}
+
+void AddressMenuItem::execute(AppContext& ctx,
+                              const std::vector<std::string>&) {
+    std::string addrStr = ctx.settings.address();
+    if (ctx.settings.port() != 0) {
+        addrStr += ":" + std::to_string(ctx.settings.port());
+    }
+    NetworkAddress na(addrStr);
+    na.print(std::cout);
 }
 
 void PushPoolMenuItem::execute(AppContext& ctx,
@@ -186,7 +235,8 @@ void PushPoolMenuItem::execute(AppContext& ctx,
 }
 
 void Menu::handleLine(const std::string& line) {
-    auto tokens = split(line);
+    std::string sanitized = trim(stripNonPrintable(line));
+    auto tokens = split(sanitized);
     if (tokens.empty()) return;
 
     const std::string cmd = toLower(tokens[0]);
@@ -212,6 +262,7 @@ Menu::Menu(AppContext& ctx) : ctx_(ctx) {
     registerItem(std::make_unique<VectorMenuItem>());
     registerItem(std::make_unique<PrintMenuItem>());
     registerItem(std::make_unique<PushPoolMenuItem>());
+    registerItem(std::make_unique<AddressMenuItem>());
     auto exitItem = std::make_unique<ExitMenuItem>();
     registerItem(std::move(exitItem));
     items_["quit"] = std::make_unique<ExitMenuItem>();

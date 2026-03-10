@@ -1,5 +1,5 @@
-if(EXISTS "/home/panai/protei-homeworks/build/task1/tests/app_tests[1]_tests.cmake")
-  include("/home/panai/protei-homeworks/build/task1/tests/app_tests[1]_tests.cmake")
+if(EXISTS "/home/vboxuser/protei-homeworks/build/task1/tests/app_tests[1]_tests.cmake")
+  include("/home/vboxuser/protei-homeworks/build/task1/tests/app_tests[1]_tests.cmake")
 else()
   add_test(app_tests_NOT_BUILT app_tests_NOT_BUILT)
 endif()

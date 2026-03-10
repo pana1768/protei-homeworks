@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panai/protei-homeworks
+CMAKE_SOURCE_DIR = /home/vboxuser/protei-homeworks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panai/protei-homeworks/build
+CMAKE_BINARY_DIR = /home/vboxuser/protei-homeworks/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles /home/panai/protei-homeworks/build/task1/tests//CMakeFiles/progress.marks
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles 0
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles /home/vboxuser/protei-homeworks/build/task1/tests//CMakeFiles/progress.marks
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/clean
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/preinstall
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/preinstall
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 task1/tests/CMakeFiles/app_tests.dir/rule:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/CMakeFiles/app_tests.dir/rule
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/tests/CMakeFiles/app_tests.dir/rule
 .PHONY : task1/tests/CMakeFiles/app_tests.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ app_tests: task1/tests/CMakeFiles/app_tests.dir/rule
 
 # fast build rule for target.
 app_tests/fast:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/build
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/build
 .PHONY : app_tests/fast
 
 utils_tests.o: utils_tests.cpp.o
@@ -180,7 +180,7 @@ utils_tests.o: utils_tests.cpp.o
 
 # target to build an object file
 utils_tests.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.o
 .PHONY : utils_tests.cpp.o
 
 utils_tests.i: utils_tests.cpp.i
@@ -188,7 +188,7 @@ utils_tests.i: utils_tests.cpp.i
 
 # target to preprocess a source file
 utils_tests.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.i
 .PHONY : utils_tests.cpp.i
 
 utils_tests.s: utils_tests.cpp.s
@@ -196,7 +196,7 @@ utils_tests.s: utils_tests.cpp.s
 
 # target to generate assembly for a file
 utils_tests.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/utils_tests.cpp.s
 .PHONY : utils_tests.cpp.s
 
 # Help Target
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -11,6 +11,7 @@ add_library(app_core
     src/DataPool.cpp
     src/ConnectionTest.cpp
     src/ResourceTest.cpp
+    src/NetworkAddress.cpp
 )
 
 add_executable(MyApp

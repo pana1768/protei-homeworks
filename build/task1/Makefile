@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panai/protei-homeworks
+CMAKE_SOURCE_DIR = /home/vboxuser/protei-homeworks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panai/protei-homeworks/build
+CMAKE_BINARY_DIR = /home/vboxuser/protei-homeworks/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles /home/panai/protei-homeworks/build/task1//CMakeFiles/progress.marks
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panai/protei-homeworks/build/CMakeFiles 0
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles /home/vboxuser/protei-homeworks/build/task1//CMakeFiles/progress.marks
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/clean
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/preinstall
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/preinstall
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 task1/CMakeFiles/app_core.dir/rule:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/app_core.dir/rule
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/app_core.dir/rule
 .PHONY : task1/CMakeFiles/app_core.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ app_core: task1/CMakeFiles/app_core.dir/rule
 
 # fast build rule for target.
 app_core/fast:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/build
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/build
 .PHONY : app_core/fast
 
 # Convenience name for target.
 task1/CMakeFiles/MyApp.dir/rule:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyApp.dir/rule
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyApp.dir/rule
 .PHONY : task1/CMakeFiles/MyApp.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ MyApp: task1/CMakeFiles/MyApp.dir/rule
 
 # fast build rule for target.
 MyApp/fast:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/build
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
 
 src/AppContext.o: src/AppContext.cpp.o
@@ -194,7 +194,7 @@ src/AppContext.o: src/AppContext.cpp.o
 
 # target to build an object file
 src/AppContext.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o
 .PHONY : src/AppContext.cpp.o
 
 src/AppContext.i: src/AppContext.cpp.i
@@ -202,7 +202,7 @@ src/AppContext.i: src/AppContext.cpp.i
 
 # target to preprocess a source file
 src/AppContext.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.i
 .PHONY : src/AppContext.cpp.i
 
 src/AppContext.s: src/AppContext.cpp.s
@@ -210,7 +210,7 @@ src/AppContext.s: src/AppContext.cpp.s
 
 # target to generate assembly for a file
 src/AppContext.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppContext.cpp.s
 .PHONY : src/AppContext.cpp.s
 
 src/AppSettings.o: src/AppSettings.cpp.o
@@ -218,7 +218,7 @@ src/AppSettings.o: src/AppSettings.cpp.o
 
 # target to build an object file
 src/AppSettings.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o
 .PHONY : src/AppSettings.cpp.o
 
 src/AppSettings.i: src/AppSettings.cpp.i
@@ -226,7 +226,7 @@ src/AppSettings.i: src/AppSettings.cpp.i
 
 # target to preprocess a source file
 src/AppSettings.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.i
 .PHONY : src/AppSettings.cpp.i
 
 src/AppSettings.s: src/AppSettings.cpp.s
@@ -234,7 +234,7 @@ src/AppSettings.s: src/AppSettings.cpp.s
 
 # target to generate assembly for a file
 src/AppSettings.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.s
 .PHONY : src/AppSettings.cpp.s
 
 src/ConnectionTest.o: src/ConnectionTest.cpp.o
@@ -242,7 +242,7 @@ src/ConnectionTest.o: src/ConnectionTest.cpp.o
 
 # target to build an object file
 src/ConnectionTest.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o
 .PHONY : src/ConnectionTest.cpp.o
 
 src/ConnectionTest.i: src/ConnectionTest.cpp.i
@@ -250,7 +250,7 @@ src/ConnectionTest.i: src/ConnectionTest.cpp.i
 
 # target to preprocess a source file
 src/ConnectionTest.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i
 .PHONY : src/ConnectionTest.cpp.i
 
 src/ConnectionTest.s: src/ConnectionTest.cpp.s
@@ -258,7 +258,7 @@ src/ConnectionTest.s: src/ConnectionTest.cpp.s
 
 # target to generate assembly for a file
 src/ConnectionTest.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s
 .PHONY : src/ConnectionTest.cpp.s
 
 src/DataPool.o: src/DataPool.cpp.o
@@ -266,7 +266,7 @@ src/DataPool.o: src/DataPool.cpp.o
 
 # target to build an object file
 src/DataPool.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o
 .PHONY : src/DataPool.cpp.o
 
 src/DataPool.i: src/DataPool.cpp.i
@@ -274,7 +274,7 @@ src/DataPool.i: src/DataPool.cpp.i
 
 # target to preprocess a source file
 src/DataPool.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.i
 .PHONY : src/DataPool.cpp.i
 
 src/DataPool.s: src/DataPool.cpp.s
@@ -282,15 +282,39 @@ src/DataPool.s: src/DataPool.cpp.s
 
 # target to generate assembly for a file
 src/DataPool.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/DataPool.cpp.s
 .PHONY : src/DataPool.cpp.s
+
+src/NetworkAddress.o: src/NetworkAddress.cpp.o
+.PHONY : src/NetworkAddress.o
+
+# target to build an object file
+src/NetworkAddress.cpp.o:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o
+.PHONY : src/NetworkAddress.cpp.o
+
+src/NetworkAddress.i: src/NetworkAddress.cpp.i
+.PHONY : src/NetworkAddress.i
+
+# target to preprocess a source file
+src/NetworkAddress.cpp.i:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.i
+.PHONY : src/NetworkAddress.cpp.i
+
+src/NetworkAddress.s: src/NetworkAddress.cpp.s
+.PHONY : src/NetworkAddress.s
+
+# target to generate assembly for a file
+src/NetworkAddress.cpp.s:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.s
+.PHONY : src/NetworkAddress.cpp.s
 
 src/ResourceTest.o: src/ResourceTest.cpp.o
 .PHONY : src/ResourceTest.o
 
 # target to build an object file
 src/ResourceTest.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o
 .PHONY : src/ResourceTest.cpp.o
 
 src/ResourceTest.i: src/ResourceTest.cpp.i
@@ -298,7 +322,7 @@ src/ResourceTest.i: src/ResourceTest.cpp.i
 
 # target to preprocess a source file
 src/ResourceTest.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.i
 .PHONY : src/ResourceTest.cpp.i
 
 src/ResourceTest.s: src/ResourceTest.cpp.s
@@ -306,7 +330,7 @@ src/ResourceTest.s: src/ResourceTest.cpp.s
 
 # target to generate assembly for a file
 src/ResourceTest.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.s
 .PHONY : src/ResourceTest.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -314,7 +338,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -322,7 +346,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -330,7 +354,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/utils.o: src/utils.cpp.o
@@ -338,7 +362,7 @@ src/utils.o: src/utils.cpp.o
 
 # target to build an object file
 src/utils.cpp.o:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.o
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.o
 .PHONY : src/utils.cpp.o
 
 src/utils.i: src/utils.cpp.i
@@ -346,7 +370,7 @@ src/utils.i: src/utils.cpp.i
 
 # target to preprocess a source file
 src/utils.cpp.i:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.i
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.i
 .PHONY : src/utils.cpp.i
 
 src/utils.s: src/utils.cpp.s
@@ -354,7 +378,7 @@ src/utils.s: src/utils.cpp.s
 
 # target to generate assembly for a file
 src/utils.cpp.s:
-	cd /home/panai/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.s
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
 # Help Target
@@ -383,6 +407,9 @@ help:
 	@echo "... src/DataPool.o"
 	@echo "... src/DataPool.i"
 	@echo "... src/DataPool.s"
+	@echo "... src/NetworkAddress.o"
+	@echo "... src/NetworkAddress.i"
+	@echo "... src/NetworkAddress.s"
 	@echo "... src/ResourceTest.o"
 	@echo "... src/ResourceTest.i"
 	@echo "... src/ResourceTest.s"
@@ -403,6 +430,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/panai/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/vboxuser/protei-homeworks/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/panai/protei-homeworks/build/_deps/googletest-src"
-  "/home/panai/protei-homeworks/build/_deps/googletest-build"
-  "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix"
-  "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
-  "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
-  "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src"
-  "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-src"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-build"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src"
+  "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/panai/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/vboxuser/protei-homeworks/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

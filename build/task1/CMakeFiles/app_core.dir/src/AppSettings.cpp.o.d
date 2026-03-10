@@ -1,7 +1,7 @@
 task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: \
- /home/panai/protei-homeworks/task1/src/AppSettings.cpp \
+ /home/vboxuser/protei-homeworks/task1/src/AppSettings.cpp \
  /usr/include/stdc-predef.h \
- /home/panai/protei-homeworks/task1/src/../include/AppSettings.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/AppSettings.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

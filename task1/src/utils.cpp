@@ -22,10 +22,10 @@ void getLocalTime(std::time_t tt, std::tm& outTm) {
     localtime_r(&tt, &outTm);
 }
 
-}  // namespace
+} 
 
-void logMessage(LogLevel level, const std::string& message,
-                const char* file, int line) {
+static void logMessageImpl(LogLevel level, const char* message,
+                          const char* file, int line) {
     using namespace std::chrono;
 
     const auto now = system_clock::now();
@@ -44,6 +44,16 @@ void logMessage(LogLevel level, const std::string& message,
         << "." << std::setw(3) << std::setfill('0') << ms
         << " [" << levelToString(level) << "]"
         << " [tid=" << tid.str() << "] "
-        << message
+        << (message ? message : "")
         << " (" << (file ? file : "<unknown>") << ":" << line << ")\n";
+}
+
+void logMessage(LogLevel level, const char* message,
+                const char* file, int line) {
+    logMessageImpl(level, message, file, line);
+}
+
+void logMessage(LogLevel level, const std::string& message,
+                const char* file, int line) {
+    logMessageImpl(level, message.c_str(), file, line);
 }

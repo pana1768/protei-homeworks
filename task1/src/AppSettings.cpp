@@ -74,4 +74,3 @@ void AppSettings::parse(int argc, char* argv[]) {
         }
     }
 }
-

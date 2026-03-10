@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/panai/protei-homeworks/build/_deps/googletest-src/googletest/include -isystem /home/panai/protei-homeworks/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -isystem /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest/include -isystem /home/vboxuser/protei-homeworks/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = 
 

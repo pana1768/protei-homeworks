@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
         AppContext ctx(std::move(settings));
         mainLoop(ctx);
     } catch (const std::exception& ex) {
-        LOG_ERROR(std::string(ex.what()));
+        LOG_ERROR(ex.what());
         std::cerr << "Failed: " << ex.what() << "\n";
         return 1;
     }
