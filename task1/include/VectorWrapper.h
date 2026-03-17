@@ -8,6 +8,7 @@
 #include <sstream>
 #include <string>
 #include <type_traits>
+#include <array>
 
 class IVectorWrapper {
 public:
@@ -18,6 +19,7 @@ public:
     virtual bool inputFromString(const std::string& str) = 0;
     virtual void print(std::ostream& out) const = 0;
     virtual std::unique_ptr<IVectorWrapper> clone() const = 0;
+    virtual bool tryGetVec4(std::array<double, 4>& out) const = 0;
 };
 
 template <typename T>
@@ -30,6 +32,7 @@ public:
     bool inputFromString(const std::string& str) override;
     void print(std::ostream& out) const override;
     std::unique_ptr<IVectorWrapper> clone() const override;
+    bool tryGetVec4(std::array<double, 4>& out) const override;
 
 private:
     Vector<T> vector_;
@@ -99,8 +102,22 @@ void TypedVectorWrapper<T>::print(std::ostream& out) const {
 }
 
 template <typename T>
-std::unique_ptr<IVectorWrapper> TypedVectorWrapper<T>::clone() const {
-    return std::make_unique<TypedVectorWrapper<T>>();
+bool TypedVectorWrapper<T>::tryGetVec4(std::array<double, 4>& out) const {
+    if (vector_.x != 1 || vector_.y != 1 || vector_.w != 1 || vector_.z != 4) {
+        return false;
+    }
+    for (size_t i = 0; i < 4; ++i) {
+        out[i] = static_cast<double>(vector_.at(0, 0, 0, i));
+    }
+    return true;
 }
+
+template <typename T>
+std::unique_ptr<IVectorWrapper> TypedVectorWrapper<T>::clone() const {
+    auto p = std::make_unique<TypedVectorWrapper<T>>();
+    p->vector_ = vector_;
+    return p;
+}
+
 
 #endif 

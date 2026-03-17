@@ -176,5 +176,6 @@ task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/sstream \
- /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/array \
+ /usr/include/c++/13/compare /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc

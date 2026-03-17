@@ -130,7 +130,10 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 
 # Recursive "all" directory target.
 task1/all: task1/CMakeFiles/app_core.dir/all
+task1/all: task1/CMakeFiles/net_core.dir/all
 task1/all: task1/CMakeFiles/MyApp.dir/all
+task1/all: task1/CMakeFiles/MyServer.dir/all
+task1/all: task1/CMakeFiles/MyClient.dir/all
 task1/all: task1/tests/all
 .PHONY : task1/all
 
@@ -140,7 +143,10 @@ task1/preinstall: task1/tests/preinstall
 
 # Recursive "clean" directory target.
 task1/clean: task1/CMakeFiles/app_core.dir/clean
+task1/clean: task1/CMakeFiles/net_core.dir/clean
 task1/clean: task1/CMakeFiles/MyApp.dir/clean
+task1/clean: task1/CMakeFiles/MyServer.dir/clean
+task1/clean: task1/CMakeFiles/MyClient.dir/clean
 task1/clean: task1/tests/clean
 .PHONY : task1/clean
 
@@ -168,7 +174,7 @@ task1/tests/clean: _deps/googletest-build/clean
 task1/CMakeFiles/app_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target app_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14 "Built target app_core"
 .PHONY : task1/CMakeFiles/app_core.dir/all
 
 # Build rule for subdir invocation for target.
@@ -188,10 +194,37 @@ task1/CMakeFiles/app_core.dir/clean:
 .PHONY : task1/CMakeFiles/app_core.dir/clean
 
 #=============================================================================
+# Target rules for target task1/CMakeFiles/net_core.dir
+
+# All Build rule for target.
+task1/CMakeFiles/net_core.dir/all:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/depend
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=25,26 "Built target net_core"
+.PHONY : task1/CMakeFiles/net_core.dir/all
+
+# Build rule for subdir invocation for target.
+task1/CMakeFiles/net_core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/net_core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
+.PHONY : task1/CMakeFiles/net_core.dir/rule
+
+# Convenience name for target.
+net_core: task1/CMakeFiles/net_core.dir/rule
+.PHONY : net_core
+
+# clean rule for target.
+task1/CMakeFiles/net_core.dir/clean:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/clean
+.PHONY : task1/CMakeFiles/net_core.dir/clean
+
+#=============================================================================
 # Target rules for target task1/CMakeFiles/MyApp.dir
 
 # All Build rule for target.
 task1/CMakeFiles/MyApp.dir/all: task1/CMakeFiles/app_core.dir/all
+task1/CMakeFiles/MyApp.dir/all: task1/CMakeFiles/net_core.dir/all
 	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=1,2 "Built target MyApp"
@@ -199,7 +232,7 @@ task1/CMakeFiles/MyApp.dir/all: task1/CMakeFiles/app_core.dir/all
 
 # Build rule for subdir invocation for target.
 task1/CMakeFiles/MyApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
 .PHONY : task1/CMakeFiles/MyApp.dir/rule
@@ -214,6 +247,60 @@ task1/CMakeFiles/MyApp.dir/clean:
 .PHONY : task1/CMakeFiles/MyApp.dir/clean
 
 #=============================================================================
+# Target rules for target task1/CMakeFiles/MyServer.dir
+
+# All Build rule for target.
+task1/CMakeFiles/MyServer.dir/all: task1/CMakeFiles/app_core.dir/all
+task1/CMakeFiles/MyServer.dir/all: task1/CMakeFiles/net_core.dir/all
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/depend
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=5,6 "Built target MyServer"
+.PHONY : task1/CMakeFiles/MyServer.dir/all
+
+# Build rule for subdir invocation for target.
+task1/CMakeFiles/MyServer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyServer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
+.PHONY : task1/CMakeFiles/MyServer.dir/rule
+
+# Convenience name for target.
+MyServer: task1/CMakeFiles/MyServer.dir/rule
+.PHONY : MyServer
+
+# clean rule for target.
+task1/CMakeFiles/MyServer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/clean
+.PHONY : task1/CMakeFiles/MyServer.dir/clean
+
+#=============================================================================
+# Target rules for target task1/CMakeFiles/MyClient.dir
+
+# All Build rule for target.
+task1/CMakeFiles/MyClient.dir/all: task1/CMakeFiles/app_core.dir/all
+task1/CMakeFiles/MyClient.dir/all: task1/CMakeFiles/net_core.dir/all
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/depend
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=3,4 "Built target MyClient"
+.PHONY : task1/CMakeFiles/MyClient.dir/all
+
+# Build rule for subdir invocation for target.
+task1/CMakeFiles/MyClient.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyClient.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/protei-homeworks/build/CMakeFiles 0
+.PHONY : task1/CMakeFiles/MyClient.dir/rule
+
+# Convenience name for target.
+MyClient: task1/CMakeFiles/MyClient.dir/rule
+.PHONY : MyClient
+
+# clean rule for target.
+task1/CMakeFiles/MyClient.dir/clean:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/clean
+.PHONY : task1/CMakeFiles/MyClient.dir/clean
+
+#=============================================================================
 # Target rules for target task1/tests/CMakeFiles/app_tests.dir
 
 # All Build rule for target.
@@ -222,7 +309,7 @@ task1/tests/CMakeFiles/app_tests.dir/all: _deps/googletest-build/googletest/CMak
 task1/tests/CMakeFiles/app_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=11,12 "Built target app_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=15,16 "Built target app_tests"
 .PHONY : task1/tests/CMakeFiles/app_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -248,7 +335,7 @@ task1/tests/CMakeFiles/app_tests.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=13,14 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=17,18 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -275,7 +362,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=15,16 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=19,20 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -301,7 +388,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=17,18 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=21,22 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -327,7 +414,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=19,20 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=23,24 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

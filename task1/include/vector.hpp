@@ -21,8 +21,12 @@ struct Vector {
     size_t w;
     size_t z;
 
-    Vector(const Vector&) = delete;
-    Vector& operator=(const Vector&) = delete;
+
+    Vector(const Vector&) = default;
+    Vector& operator=(const Vector&) = default;
+    Vector(Vector&&) noexcept = default;
+    Vector& operator=(Vector&&) noexcept = default;
+    
 
     size_t index(size_t i, size_t j, size_t m, size_t n) const {
         return i * (y * w * z) + j * (w * z) + m * z + n;

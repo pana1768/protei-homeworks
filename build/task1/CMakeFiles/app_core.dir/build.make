@@ -69,24 +69,10 @@ include task1/CMakeFiles/app_core.dir/progress.make
 # Include the compile flags for this target's objects.
 include task1/CMakeFiles/app_core.dir/flags.make
 
-task1/CMakeFiles/app_core.dir/src/utils.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
-task1/CMakeFiles/app_core.dir/src/utils.cpp.o: /home/vboxuser/protei-homeworks/task1/src/utils.cpp
-task1/CMakeFiles/app_core.dir/src/utils.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object task1/CMakeFiles/app_core.dir/src/utils.cpp.o"
-	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/utils.cpp.o -MF CMakeFiles/app_core.dir/src/utils.cpp.o.d -o CMakeFiles/app_core.dir/src/utils.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/utils.cpp
-
-task1/CMakeFiles/app_core.dir/src/utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/utils.cpp.i"
-	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/protei-homeworks/task1/src/utils.cpp > CMakeFiles/app_core.dir/src/utils.cpp.i
-
-task1/CMakeFiles/app_core.dir/src/utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/utils.cpp.s"
-	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/protei-homeworks/task1/src/utils.cpp -o CMakeFiles/app_core.dir/src/utils.cpp.s
-
 task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
 task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: /home/vboxuser/protei-homeworks/task1/src/AppSettings.cpp
 task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o"
 	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o -MF CMakeFiles/app_core.dir/src/AppSettings.cpp.o.d -o CMakeFiles/app_core.dir/src/AppSettings.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/AppSettings.cpp
 
 task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.i: cmake_force
@@ -100,7 +86,7 @@ task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.s: cmake_force
 task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
 task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: /home/vboxuser/protei-homeworks/task1/src/AppContext.cpp
 task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o"
 	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o -MF CMakeFiles/app_core.dir/src/AppContext.cpp.o.d -o CMakeFiles/app_core.dir/src/AppContext.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/AppContext.cpp
 
 task1/CMakeFiles/app_core.dir/src/AppContext.cpp.i: cmake_force
@@ -114,7 +100,7 @@ task1/CMakeFiles/app_core.dir/src/AppContext.cpp.s: cmake_force
 task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
 task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: /home/vboxuser/protei-homeworks/task1/src/DataPool.cpp
 task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o"
 	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o -MF CMakeFiles/app_core.dir/src/DataPool.cpp.o.d -o CMakeFiles/app_core.dir/src/DataPool.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/DataPool.cpp
 
 task1/CMakeFiles/app_core.dir/src/DataPool.cpp.i: cmake_force
@@ -128,7 +114,7 @@ task1/CMakeFiles/app_core.dir/src/DataPool.cpp.s: cmake_force
 task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
 task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o: /home/vboxuser/protei-homeworks/task1/src/ConnectionTest.cpp
 task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o"
 	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o -MF CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o.d -o CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/ConnectionTest.cpp
 
 task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.i: cmake_force
@@ -142,7 +128,7 @@ task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.s: cmake_force
 task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
 task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o: /home/vboxuser/protei-homeworks/task1/src/ResourceTest.cpp
 task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o"
 	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o -MF CMakeFiles/app_core.dir/src/ResourceTest.cpp.o.d -o CMakeFiles/app_core.dir/src/ResourceTest.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/ResourceTest.cpp
 
 task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.i: cmake_force
@@ -152,6 +138,20 @@ task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.i: cmake_force
 task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/ResourceTest.cpp.s"
 	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/protei-homeworks/task1/src/ResourceTest.cpp -o CMakeFiles/app_core.dir/src/ResourceTest.cpp.s
+
+task1/CMakeFiles/app_core.dir/src/utils.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
+task1/CMakeFiles/app_core.dir/src/utils.cpp.o: /home/vboxuser/protei-homeworks/task1/src/utils.cpp
+task1/CMakeFiles/app_core.dir/src/utils.cpp.o: task1/CMakeFiles/app_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object task1/CMakeFiles/app_core.dir/src/utils.cpp.o"
+	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT task1/CMakeFiles/app_core.dir/src/utils.cpp.o -MF CMakeFiles/app_core.dir/src/utils.cpp.o.d -o CMakeFiles/app_core.dir/src/utils.cpp.o -c /home/vboxuser/protei-homeworks/task1/src/utils.cpp
+
+task1/CMakeFiles/app_core.dir/src/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app_core.dir/src/utils.cpp.i"
+	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/protei-homeworks/task1/src/utils.cpp > CMakeFiles/app_core.dir/src/utils.cpp.i
+
+task1/CMakeFiles/app_core.dir/src/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app_core.dir/src/utils.cpp.s"
+	cd /home/vboxuser/protei-homeworks/build/task1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/protei-homeworks/task1/src/utils.cpp -o CMakeFiles/app_core.dir/src/utils.cpp.s
 
 task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o: task1/CMakeFiles/app_core.dir/flags.make
 task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o: /home/vboxuser/protei-homeworks/task1/src/NetworkAddress.cpp
@@ -169,23 +169,23 @@ task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.s: cmake_force
 
 # Object files for target app_core
 app_core_OBJECTS = \
-"CMakeFiles/app_core.dir/src/utils.cpp.o" \
 "CMakeFiles/app_core.dir/src/AppSettings.cpp.o" \
 "CMakeFiles/app_core.dir/src/AppContext.cpp.o" \
 "CMakeFiles/app_core.dir/src/DataPool.cpp.o" \
 "CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o" \
 "CMakeFiles/app_core.dir/src/ResourceTest.cpp.o" \
+"CMakeFiles/app_core.dir/src/utils.cpp.o" \
 "CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o"
 
 # External object files for target app_core
 app_core_EXTERNAL_OBJECTS =
 
-task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/utils.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/AppSettings.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/DataPool.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/ConnectionTest.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.o
+task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/utils.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/src/NetworkAddress.cpp.o
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/build.make
 task1/libapp_core.a: task1/CMakeFiles/app_core.dir/link.txt

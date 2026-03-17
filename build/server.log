@@ -1,0 +1,6 @@
+2026-03-17 13:32:23.309 [ERROR] [tid=136996118054720] server: listen failed (/home/vboxuser/protei-homeworks/task1/src/server_main.cpp:18)
+2026-03-17 13:33:29.330 [INFO] [tid=131259389458240] server listening on port 8080 (/home/vboxuser/protei-homeworks/task1/src/server_main.cpp:22)
+2026-03-17 13:34:34.436 [INFO] [tid=131259389458240] client accepted (/home/vboxuser/protei-homeworks/task1/src/server_main.cpp:28)
+2026-03-17 13:34:34.436 [INFO] [tid=131259389458240] request received (/home/vboxuser/protei-homeworks/task1/src/server_main.cpp:36)
+2026-03-17 13:34:34.436 [INFO] [tid=131259389458240] processing vectors: 1 (/home/vboxuser/protei-homeworks/task1/src/server_main.cpp:44)
+2026-03-17 13:34:34.436 [INFO] [tid=131259389458240] response sent (/home/vboxuser/protei-homeworks/task1/src/server_main.cpp:48)

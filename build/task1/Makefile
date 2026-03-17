@@ -176,6 +176,20 @@ app_core/fast:
 .PHONY : app_core/fast
 
 # Convenience name for target.
+task1/CMakeFiles/net_core.dir/rule:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/net_core.dir/rule
+.PHONY : task1/CMakeFiles/net_core.dir/rule
+
+# Convenience name for target.
+net_core: task1/CMakeFiles/net_core.dir/rule
+.PHONY : net_core
+
+# fast build rule for target.
+net_core/fast:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/build
+.PHONY : net_core/fast
+
+# Convenience name for target.
 task1/CMakeFiles/MyApp.dir/rule:
 	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyApp.dir/rule
 .PHONY : task1/CMakeFiles/MyApp.dir/rule
@@ -188,6 +202,34 @@ MyApp: task1/CMakeFiles/MyApp.dir/rule
 MyApp/fast:
 	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
+
+# Convenience name for target.
+task1/CMakeFiles/MyServer.dir/rule:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyServer.dir/rule
+.PHONY : task1/CMakeFiles/MyServer.dir/rule
+
+# Convenience name for target.
+MyServer: task1/CMakeFiles/MyServer.dir/rule
+.PHONY : MyServer
+
+# fast build rule for target.
+MyServer/fast:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/build
+.PHONY : MyServer/fast
+
+# Convenience name for target.
+task1/CMakeFiles/MyClient.dir/rule:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1/CMakeFiles/MyClient.dir/rule
+.PHONY : task1/CMakeFiles/MyClient.dir/rule
+
+# Convenience name for target.
+MyClient: task1/CMakeFiles/MyClient.dir/rule
+.PHONY : MyClient
+
+# fast build rule for target.
+MyClient/fast:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/build
+.PHONY : MyClient/fast
 
 src/AppContext.o: src/AppContext.cpp.o
 .PHONY : src/AppContext.o
@@ -333,6 +375,54 @@ src/ResourceTest.cpp.s:
 	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/app_core.dir/build.make task1/CMakeFiles/app_core.dir/src/ResourceTest.cpp.s
 .PHONY : src/ResourceTest.cpp.s
 
+src/TcpJsonProtocol.o: src/TcpJsonProtocol.cpp.o
+.PHONY : src/TcpJsonProtocol.o
+
+# target to build an object file
+src/TcpJsonProtocol.cpp.o:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/src/TcpJsonProtocol.cpp.o
+.PHONY : src/TcpJsonProtocol.cpp.o
+
+src/TcpJsonProtocol.i: src/TcpJsonProtocol.cpp.i
+.PHONY : src/TcpJsonProtocol.i
+
+# target to preprocess a source file
+src/TcpJsonProtocol.cpp.i:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/src/TcpJsonProtocol.cpp.i
+.PHONY : src/TcpJsonProtocol.cpp.i
+
+src/TcpJsonProtocol.s: src/TcpJsonProtocol.cpp.s
+.PHONY : src/TcpJsonProtocol.s
+
+# target to generate assembly for a file
+src/TcpJsonProtocol.cpp.s:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/src/TcpJsonProtocol.cpp.s
+.PHONY : src/TcpJsonProtocol.cpp.s
+
+src/client_main.o: src/client_main.cpp.o
+.PHONY : src/client_main.o
+
+# target to build an object file
+src/client_main.cpp.o:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/src/client_main.cpp.o
+.PHONY : src/client_main.cpp.o
+
+src/client_main.i: src/client_main.cpp.i
+.PHONY : src/client_main.i
+
+# target to preprocess a source file
+src/client_main.cpp.i:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/src/client_main.cpp.i
+.PHONY : src/client_main.cpp.i
+
+src/client_main.s: src/client_main.cpp.s
+.PHONY : src/client_main.s
+
+# target to generate assembly for a file
+src/client_main.cpp.s:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/src/client_main.cpp.s
+.PHONY : src/client_main.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -356,6 +446,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/server_main.o: src/server_main.cpp.o
+.PHONY : src/server_main.o
+
+# target to build an object file
+src/server_main.cpp.o:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/src/server_main.cpp.o
+.PHONY : src/server_main.cpp.o
+
+src/server_main.i: src/server_main.cpp.i
+.PHONY : src/server_main.i
+
+# target to preprocess a source file
+src/server_main.cpp.i:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/src/server_main.cpp.i
+.PHONY : src/server_main.cpp.i
+
+src/server_main.s: src/server_main.cpp.s
+.PHONY : src/server_main.s
+
+# target to generate assembly for a file
+src/server_main.cpp.s:
+	cd /home/vboxuser/protei-homeworks/build && $(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/src/server_main.cpp.s
+.PHONY : src/server_main.cpp.s
 
 src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
@@ -394,7 +508,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
+	@echo "... MyClient"
+	@echo "... MyServer"
 	@echo "... app_core"
+	@echo "... net_core"
 	@echo "... src/AppContext.o"
 	@echo "... src/AppContext.i"
 	@echo "... src/AppContext.s"
@@ -413,9 +530,18 @@ help:
 	@echo "... src/ResourceTest.o"
 	@echo "... src/ResourceTest.i"
 	@echo "... src/ResourceTest.s"
+	@echo "... src/TcpJsonProtocol.o"
+	@echo "... src/TcpJsonProtocol.i"
+	@echo "... src/TcpJsonProtocol.s"
+	@echo "... src/client_main.o"
+	@echo "... src/client_main.i"
+	@echo "... src/client_main.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/server_main.o"
+	@echo "... src/server_main.i"
+	@echo "... src/server_main.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

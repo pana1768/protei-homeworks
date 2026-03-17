@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MyClient.dir/src/client_main.cpp.o -o MyClient  libapp_core.a libnet_core.a 

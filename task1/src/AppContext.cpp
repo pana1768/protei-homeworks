@@ -60,6 +60,18 @@ public:
     void execute(AppContext& ctx, const std::vector<std::string>& args) override;
 };
 
+class QueueMenuItem : public MenuItem {
+public:
+    QueueMenuItem() : MenuItem("queue") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
+class SendMenuItem : public MenuItem {
+public:
+    SendMenuItem() : MenuItem("send") {}
+    void execute(AppContext& ctx, const std::vector<std::string>& args) override;
+};
+
 namespace {
 
 std::string toLower(const std::string& s) {
@@ -211,6 +223,8 @@ void HelpMenuItem::execute(AppContext&,
         "  print               - print current vector\n"
         "  push                - push current vector to DataPool (FIFO)\n"
         "  address             - show network address and port\n"
+        "  queue               - add current 4D vector to send queue\n"
+        "  send [host] [port]  - send queued vectors to server\n"
         "  exit, quit          - exit\n";
 }
 
@@ -233,6 +247,85 @@ void PushPoolMenuItem::execute(AppContext& ctx,
     ctx.dataPool.push(ctx.currentVector->clone());
     std::cout << "Vector pushed to DataPool\n";
 }
+
+
+void QueueMenuItem::execute(AppContext& ctx,
+                            const std::vector<std::string>&) {
+    if (!ctx.currentVector) {
+        LOG_WARNING("queue: no vector");
+        return;
+    }
+    std::array<double, 4> v{};
+    if (!ctx.currentVector->tryGetVec4(v)) {
+        LOG_WARNING("queue: current vector is not 4D");
+        return;
+    }
+    ctx.queuedVectors.push_back(v);
+    LOG_INFO("queued vector");
+    std::cout << "Queued vectors: " << ctx.queuedVectors.size() << "\n";
+}
+
+void SendMenuItem::execute(AppContext& ctx,
+                           const std::vector<std::string>& args) {
+    if (ctx.queuedVectors.empty()) {
+        LOG_WARNING("send: queue is empty");
+        return;
+    }
+
+    std::string host = ctx.settings.address();
+    std::uint16_t port = static_cast<std::uint16_t>(ctx.settings.port() ? ctx.settings.port() : 8080);
+    if (args.size() >= 1) host = args[0];
+    if (args.size() >= 2) {
+        try {
+            const int p = std::stoi(args[1]);
+            if (p > 0 && p < 65536) port = static_cast<std::uint16_t>(p);
+        } catch (...) {
+            LOG_WARNING("send: invalid port");
+            return;
+        }
+    }
+
+    LOG_INFO(("connecting to " + host + ":" + std::to_string(port)).c_str());
+    const int fd = tcpjson::connectTo(host, port);
+    if (fd < 0) {
+        LOG_ERROR("send: connect failed");
+        return;
+    }
+    LOG_INFO("connected");
+
+    const std::string req = tcpjson::encodeVectors(ctx.queuedVectors);
+    if (!tcpjson::sendFrame(fd, req)) {
+        LOG_ERROR("send: failed to send");
+        tcpjson::closeFd(fd);
+        return;
+    }
+    LOG_INFO("request sent");
+
+    std::string resp;
+    if (!tcpjson::recvFrame(fd, resp)) {
+        LOG_ERROR("send: failed to receive");
+        tcpjson::closeFd(fd);
+        return;
+    }
+    tcpjson::closeFd(fd);
+    LOG_INFO("response received");
+
+    std::vector<tcpjson::Vec4> out;
+    if (!tcpjson::decodeVectors(resp, out)) {
+        LOG_WARNING("send: response is not vectors json");
+        std::cout << resp << "\n";
+        return;
+    }
+
+    ctx.queuedVectors = out;
+    std::cout << "Server returned " << ctx.queuedVectors.size() << " vectors:\n";
+    for (size_t i = 0; i < ctx.queuedVectors.size(); ++i) {
+        const auto& v = ctx.queuedVectors[i];
+        std::cout << "v" << (i + 1) << ": " << v[0] << " " << v[1] << " " << v[2] << " " << v[3] << "\n";
+    }
+    LOG_INFO("queue updated from server response");
+}
+
 
 void Menu::handleLine(const std::string& line) {
     std::string sanitized = trim(stripNonPrintable(line));
@@ -262,6 +355,8 @@ Menu::Menu(AppContext& ctx) : ctx_(ctx) {
     registerItem(std::make_unique<VectorMenuItem>());
     registerItem(std::make_unique<PrintMenuItem>());
     registerItem(std::make_unique<PushPoolMenuItem>());
+    registerItem(std::make_unique<QueueMenuItem>());
+    registerItem(std::make_unique<SendMenuItem>());
     registerItem(std::make_unique<AddressMenuItem>());
     auto exitItem = std::make_unique<ExitMenuItem>();
     registerItem(std::move(exitItem));

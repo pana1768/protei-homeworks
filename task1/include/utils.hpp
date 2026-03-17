@@ -4,12 +4,16 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <iosfwd>
 
 enum class LogLevel {
     Info,
     Warning,
     Error
 };
+
+void initLogging(const std::string& filePath);
+void shutdownLogging();
 
 void logMessage(LogLevel level, const std::string& message,
                 const char* file, int line);

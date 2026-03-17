@@ -5,6 +5,7 @@
 #include "DataPool.h"
 #include "VectorWrapper.h"
 #include "interfaces.h"
+#include "TcpJsonProtocol.h"
 
 #include <memory>
 #include <string>
@@ -13,6 +14,7 @@
 struct AppContext {
     AppSettings settings;
     std::unique_ptr<IVectorWrapper> currentVector;
+    std::vector<tcpjson::Vec4> queuedVectors;
     DataPool dataPool;
     std::vector<std::unique_ptr<ITest>> tests;
     bool shouldExit = false;

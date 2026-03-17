@@ -93,6 +93,7 @@ MyApp_EXTERNAL_OBJECTS =
 task1/MyApp: task1/CMakeFiles/MyApp.dir/src/main.cpp.o
 task1/MyApp: task1/CMakeFiles/MyApp.dir/build.make
 task1/MyApp: task1/libapp_core.a
+task1/MyApp: task1/libnet_core.a
 task1/MyApp: task1/CMakeFiles/MyApp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MyApp"
 	cd /home/vboxuser/protei-homeworks/build/task1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyApp.dir/link.txt --verbose=$(VERBOSE)
