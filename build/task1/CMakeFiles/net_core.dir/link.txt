@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnet_core.a CMakeFiles/net_core.dir/src/TcpJsonProtocol.cpp.o
+/usr/bin/ranlib libnet_core.a

@@ -175,6 +175,19 @@ app_core/fast:
 .PHONY : app_core/fast
 
 #=============================================================================
+# Target rules for targets named net_core
+
+# Build rule for target.
+net_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 net_core
+.PHONY : net_core
+
+# fast build rule for target.
+net_core/fast:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/net_core.dir/build.make task1/CMakeFiles/net_core.dir/build
+.PHONY : net_core/fast
+
+#=============================================================================
 # Target rules for targets named MyApp
 
 # Build rule for target.
@@ -186,6 +199,32 @@ MyApp: cmake_check_build_system
 MyApp/fast:
 	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyApp.dir/build.make task1/CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
+
+#=============================================================================
+# Target rules for targets named MyServer
+
+# Build rule for target.
+MyServer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyServer
+.PHONY : MyServer
+
+# fast build rule for target.
+MyServer/fast:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyServer.dir/build.make task1/CMakeFiles/MyServer.dir/build
+.PHONY : MyServer/fast
+
+#=============================================================================
+# Target rules for targets named MyClient
+
+# Build rule for target.
+MyClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyClient
+.PHONY : MyClient
+
+# fast build rule for target.
+MyClient/fast:
+	$(MAKE) $(MAKESILENT) -f task1/CMakeFiles/MyClient.dir/build.make task1/CMakeFiles/MyClient.dir/build
+.PHONY : MyClient/fast
 
 #=============================================================================
 # Target rules for targets named app_tests
@@ -265,12 +304,15 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
+	@echo "... MyClient"
+	@echo "... MyServer"
 	@echo "... app_core"
 	@echo "... app_tests"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... net_core"
 .PHONY : help
 
 

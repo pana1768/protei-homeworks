@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/MyApp.dir/src/main.cpp.o -o MyApp  libapp_core.a 
+/usr/bin/c++ CMakeFiles/MyApp.dir/src/main.cpp.o -o MyApp  libapp_core.a libnet_core.a 

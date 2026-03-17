@@ -5,7 +5,10 @@
 /home/vboxuser/protei-homeworks/build/CMakeFiles/install/local.dir
 /home/vboxuser/protei-homeworks/build/CMakeFiles/install/strip.dir
 /home/vboxuser/protei-homeworks/build/task1/CMakeFiles/app_core.dir
+/home/vboxuser/protei-homeworks/build/task1/CMakeFiles/net_core.dir
 /home/vboxuser/protei-homeworks/build/task1/CMakeFiles/MyApp.dir
+/home/vboxuser/protei-homeworks/build/task1/CMakeFiles/MyServer.dir
+/home/vboxuser/protei-homeworks/build/task1/CMakeFiles/MyClient.dir
 /home/vboxuser/protei-homeworks/build/task1/CMakeFiles/edit_cache.dir
 /home/vboxuser/protei-homeworks/build/task1/CMakeFiles/rebuild_cache.dir
 /home/vboxuser/protei-homeworks/build/task1/CMakeFiles/list_install_components.dir

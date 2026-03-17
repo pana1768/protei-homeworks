@@ -1,0 +1,6 @@
+2026-03-17 13:34:23.404 [INFO] [tid=139644124677952] queued vector (/home/vboxuser/protei-homeworks/task1/src/AppContext.cpp:264)
+2026-03-17 13:34:34.434 [INFO] [tid=139644124677952] connecting to 127.0.0.1:8080 (/home/vboxuser/protei-homeworks/task1/src/AppContext.cpp:288)
+2026-03-17 13:34:34.435 [INFO] [tid=139644124677952] connected (/home/vboxuser/protei-homeworks/task1/src/AppContext.cpp:294)
+2026-03-17 13:34:34.435 [INFO] [tid=139644124677952] request sent (/home/vboxuser/protei-homeworks/task1/src/AppContext.cpp:302)
+2026-03-17 13:34:34.436 [INFO] [tid=139644124677952] response received (/home/vboxuser/protei-homeworks/task1/src/AppContext.cpp:311)
+2026-03-17 13:34:34.440 [INFO] [tid=139644124677952] queue updated from server response (/home/vboxuser/protei-homeworks/task1/src/AppContext.cpp:326)

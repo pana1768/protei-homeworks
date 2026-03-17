@@ -178,7 +178,10 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/sstream \
- /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/array \
+ /usr/include/c++/13/compare /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /home/vboxuser/protei-homeworks/task1/src/../include/interfaces.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/TcpJsonProtocol.h \
+ /usr/include/c++/13/cstdint \
  /home/vboxuser/protei-homeworks/task1/src/../include/utils.hpp

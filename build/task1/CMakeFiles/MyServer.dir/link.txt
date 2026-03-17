@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MyServer.dir/src/server_main.cpp.o -o MyServer  libapp_core.a libnet_core.a 

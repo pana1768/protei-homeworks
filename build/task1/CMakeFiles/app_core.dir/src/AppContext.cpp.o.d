@@ -177,9 +177,12 @@ task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/sstream \
- /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/array \
+ /usr/include/c++/13/compare /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /home/vboxuser/protei-homeworks/task1/src/../include/interfaces.h \
+ /home/vboxuser/protei-homeworks/task1/src/../include/TcpJsonProtocol.h \
+ /usr/include/c++/13/cstdint \
  /home/vboxuser/protei-homeworks/task1/src/../include/ConnectionTest.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/../include/interfaces.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/ResourceTest.h \
@@ -193,9 +196,8 @@ task1/CMakeFiles/app_core.dir/src/AppContext.cpp.o: \
  /usr/include/c++/13/bits/erase_if.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/utils.hpp \
  /home/vboxuser/protei-homeworks/task1/src/../include/NetworkAddress.h \
- /usr/include/c++/13/cstdint /usr/include/c++/13/functional \
- /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/array \
- /usr/include/c++/13/compare /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h

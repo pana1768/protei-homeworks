@@ -6,6 +6,7 @@
 
 int main(int argc, char* argv[]) {
     try {
+        initLogging("app.log");
         AppSettings settings(argc, argv);
 
         std::cout << "Application started.\n";
@@ -19,5 +20,6 @@ int main(int argc, char* argv[]) {
         std::cerr << "Failed: " << ex.what() << "\n";
         return 1;
     }
+    shutdownLogging();
     return 0;
 }
