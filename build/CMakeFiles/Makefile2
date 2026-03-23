@@ -304,9 +304,9 @@ task1/CMakeFiles/MyClient.dir/clean:
 # Target rules for target task1/tests/CMakeFiles/app_tests.dir
 
 # All Build rule for target.
-task1/tests/CMakeFiles/app_tests.dir/all: task1/CMakeFiles/app_core.dir/all
 task1/tests/CMakeFiles/app_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 task1/tests/CMakeFiles/app_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+task1/tests/CMakeFiles/app_tests.dir/all: task1/CMakeFiles/app_core.dir/all
 	$(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f task1/tests/CMakeFiles/app_tests.dir/build.make task1/tests/CMakeFiles/app_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vboxuser/protei-homeworks/build/CMakeFiles --progress-num=15,16 "Built target app_tests"

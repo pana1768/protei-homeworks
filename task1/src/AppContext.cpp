@@ -11,6 +11,7 @@
 #include <iostream>
 #include <sstream>
 #include <unordered_map>
+#include <stdexcept>
 
 class AliasMenuItem : public MenuItem {
 public:
@@ -129,13 +130,30 @@ std::unordered_map<std::string, VectorFactory>& getVectorRegistry() {
 AppContext::AppContext(AppSettings s)
     : settings(std::move(s)),
       currentVector(nullptr),
+      queuedVectors(),
       dataPool(),
       tests(),
+      serverFd(-1),
+      serverConnected(false),
       shouldExit(false) {
     tests.push_back(std::make_unique<ConnectionTest>(
         std::vector<std::string>{settings.address()}));
     tests.push_back(std::make_unique<ResourceTest>(
         std::vector<std::string>{"config.txt"}));
+    serverFd = tcpjson::connectTo(settings.address(), static_cast<std::uint16_t>(settings.port()));
+    if (serverFd < 0) {
+        throw std::runtime_error("failed to connect server at startup");
+    }
+    serverConnected = true;
+    LOG_INFO(("startup connected to " + settings.address() + ":" + std::to_string(settings.port())).c_str());
+}
+
+AppContext::~AppContext() {
+    if (serverConnected) {
+        tcpjson::closeFd(serverFd);
+        serverConnected = false;
+        serverFd = -1;
+    }
 }
 
 std::unique_ptr<IVectorWrapper> AppContext::createVectorByType(
@@ -209,6 +227,12 @@ void PrintMenuItem::execute(AppContext& ctx,
 
 void ExitMenuItem::execute(AppContext& ctx,
                            const std::vector<std::string>&) {
+    if (ctx.serverConnected) {
+        tcpjson::closeFd(ctx.serverFd);
+        ctx.serverConnected = false;
+        ctx.serverFd = -1;
+        LOG_INFO("server connection closed on exit");
+    }
     ctx.shouldExit = true;
     std::cout << "Exit\n";
 }
@@ -224,7 +248,7 @@ void HelpMenuItem::execute(AppContext&,
         "  push                - push current vector to DataPool (FIFO)\n"
         "  address             - show network address and port\n"
         "  queue               - add current 4D vector to send queue\n"
-        "  send [host] [port]  - send queued vectors to server\n"
+        "  send                - send queued vectors to server\n"
         "  exit, quit          - exit\n";
 }
 
@@ -272,42 +296,32 @@ void SendMenuItem::execute(AppContext& ctx,
         return;
     }
 
-    std::string host = ctx.settings.address();
-    std::uint16_t port = static_cast<std::uint16_t>(ctx.settings.port() ? ctx.settings.port() : 8080);
-    if (args.size() >= 1) host = args[0];
-    if (args.size() >= 2) {
-        try {
-            const int p = std::stoi(args[1]);
-            if (p > 0 && p < 65536) port = static_cast<std::uint16_t>(p);
-        } catch (...) {
-            LOG_WARNING("send: invalid port");
-            return;
-        }
+    if (!args.empty()) {
+        LOG_WARNING("send: endpoint override is disabled for persistent connection");
     }
-
-    LOG_INFO(("connecting to " + host + ":" + std::to_string(port)).c_str());
-    const int fd = tcpjson::connectTo(host, port);
-    if (fd < 0) {
-        LOG_ERROR("send: connect failed");
+    if (!ctx.serverConnected || ctx.serverFd < 0) {
+        LOG_ERROR("send: server is not connected");
         return;
     }
-    LOG_INFO("connected");
 
     const std::string req = tcpjson::encodeVectors(ctx.queuedVectors);
-    if (!tcpjson::sendFrame(fd, req)) {
+    if (!tcpjson::sendFrame(ctx.serverFd, req)) {
         LOG_ERROR("send: failed to send");
-        tcpjson::closeFd(fd);
+        tcpjson::closeFd(ctx.serverFd);
+        ctx.serverConnected = false;
+        ctx.serverFd = -1;
         return;
     }
     LOG_INFO("request sent");
 
     std::string resp;
-    if (!tcpjson::recvFrame(fd, resp)) {
+    if (!tcpjson::recvFrame(ctx.serverFd, resp)) {
         LOG_ERROR("send: failed to receive");
-        tcpjson::closeFd(fd);
+        tcpjson::closeFd(ctx.serverFd);
+        ctx.serverConnected = false;
+        ctx.serverFd = -1;
         return;
     }
-    tcpjson::closeFd(fd);
     LOG_INFO("response received");
 
     std::vector<tcpjson::Vec4> out;

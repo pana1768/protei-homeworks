@@ -17,9 +17,12 @@ struct AppContext {
     std::vector<tcpjson::Vec4> queuedVectors;
     DataPool dataPool;
     std::vector<std::unique_ptr<ITest>> tests;
+    int serverFd{-1};
+    bool serverConnected{false};
     bool shouldExit = false;
 
     explicit AppContext(AppSettings s);
+    ~AppContext();
 
     std::unique_ptr<IVectorWrapper> createVectorByType(const std::string& typeName) const;
 };

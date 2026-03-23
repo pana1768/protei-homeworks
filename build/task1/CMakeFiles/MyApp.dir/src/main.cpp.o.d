@@ -150,7 +150,10 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/AppContext.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/AppSettings.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/DataPool.h \
@@ -162,11 +165,7 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \
  /usr/include/c++/13/bits/allocated_ptr.h \
@@ -183,5 +182,4 @@ task1/CMakeFiles/MyApp.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /home/vboxuser/protei-homeworks/task1/src/../include/interfaces.h \
  /home/vboxuser/protei-homeworks/task1/src/../include/TcpJsonProtocol.h \
- /usr/include/c++/13/cstdint \
  /home/vboxuser/protei-homeworks/task1/src/../include/utils.hpp
