@@ -4,10 +4,30 @@
 
 #include <iostream>
 
+namespace {
+void printHelp() {
+    std::cout
+        << "MyApp client\n"
+        << "Usage:\n"
+        << "  MyApp -i <server_ipv4> -p <server_port> [-u <user>] [--help]\n"
+        << "Required:\n"
+        << "  -i   IPv4 address of server\n"
+        << "  -p   TCP server port\n"
+        << "Optional:\n"
+        << "  -u   user alias\n"
+        << "  --help  show this help\n";
+}
+}
+
 int main(int argc, char* argv[]) {
     try {
         initLogging("app.log");
         AppSettings settings(argc, argv);
+        if (settings.helpRequested()) {
+            printHelp();
+            shutdownLogging();
+            return 0;
+        }
 
         std::cout << "Application started.\n";
         settings.print(std::cout);
